@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700;900&display=swap" rel="stylesheet" />
+    <!-- Material Symbols & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome for Form Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body.error-page-body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .auth-card {
+            background: #ffffff !important;
+            border: 1px solid var(--outline-variant) !important;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
+            color: var(--on-surface);
+            overflow: hidden;
+        }
+
+        .auth-image-side {
+            background: url('./assets/images/about.webp') center/cover no-repeat;
+            position: relative;
+            min-height: 100%;
+            height: 100%;
+        }
+
+        .auth-image-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0, 107, 86, 0.4), rgba(0, 107, 86, 0.9));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 3rem;
+        }
+
+        .modern-role-selector {
+            display: flex;
+            gap: 12px;
+            justify-content: space-between;
+        }
+
+        .role-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px 10px;
+            border: 1px solid var(--outline-variant);
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: var(--surface-container-low);
+        }
+
+        .role-item i {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            color: var(--on-primary-container);
+        }
+
+        .btn-check:checked+.role-item {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 107, 86, 0.3);
+        }
+
+        .btn-check:checked+.role-item i {
+            color: white;
+        }
+
+        .role-item:hover {
+            border-color: var(--primary-light);
+            transform: translateY(-2px);
+        }
+
+        /* Floating Icons Animation */
+        .floating-icons .hero-shape {
+            position: absolute;
+            color: var(--primary-light);
+            opacity: 0.2;
+            z-index: 1;
+            pointer-events: none;
+            transition: 0.3s;
+        }
+
+        .hero-shape-1 { top: 10%; left: 5%; font-size: 60px; animation: heroFloat 8s ease-in-out infinite; }
+        .hero-shape-2 { top: 15%; right: 8%; font-size: 50px; animation: heroRotate 15s linear infinite; }
+        .hero-shape-3 { bottom: 15%; left: 10%; font-size: 45px; animation: heroFloat 9s ease-in-out infinite 1.5s; }
+        .hero-shape-4 { bottom: 20%; right: 12%; font-size: 55px; animation: heroPulse 6s ease-in-out infinite; }
+        .hero-shape-5 { top: 45%; left: 3%; font-size: 35px; animation: heroRotate 12s linear infinite reverse; }
+        .hero-shape-6 { top: 60%; right: 5%; font-size: 40px; animation: heroFloat 12s ease-in-out infinite 1s reverse; }
+        .hero-shape-7 { bottom: 40%; left: 18%; font-size: 30px; animation: heroFloat 8.5s ease-in-out infinite 0.8s; }
+        .hero-shape-8 { top: 5%; left: 45%; font-size: 45px; animation: heroPulse 10s ease-in-out infinite; }
+
+        /* Modern Input Styling */
+        .auth-input-modern {
+            background: #f8f9fa !important;
+            border: 1px solid var(--outline-variant) !important;
+            color: var(--on-surface) !important;
+            padding: 0.8rem 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .auth-input-modern:focus {
+            background: #ffffff !important;
+            border-color: var(--primary) !important;
+            box-shadow: 0 0 0 0.25rem rgba(0, 107, 86, 0.25);
+        }
+
+        .auth-input-modern::placeholder {
+            color: var(--on-surface-variant);
+        }
+
+        /* checked */
+        .form-check-input:checked {
+            background-color: var(--primary) !important;
+            border-color: var(--primary) !important;
+        }
+    </style>
+</head>
+
+<body class="error-page-body">
+
+    <div class="floating-icons d-none d-md-block">
+        <span class="material-symbols-outlined hero-shape hero-shape-1">psychology</span>
+        <span class="material-symbols-outlined hero-shape hero-shape-2">favorite</span>
+        <span class="material-symbols-outlined hero-shape hero-shape-3">spa</span>
+        <span class="material-symbols-outlined hero-shape hero-shape-4">self_improvement</span>
+        <span class="material-symbols-outlined hero-shape hero-shape-5">water_drop</span>
+        <span class="material-symbols-outlined hero-shape hero-shape-6">sentiment_very_satisfied</span>
+        <span class="material-symbols-outlined hero-shape hero-shape-7">sunny</span>
+        <span class="material-symbols-outlined hero-shape hero-shape-8">groups</span>
+    </div>
+
+    <div class="container position-relative py-3" style="z-index: 5;">
+        <div class="row justify-content-center">
+            <div class="col-lg-11 col-xl-10">
+                <div class="auth-card rounded-5" data-aos="zoom-in">
+                    <div class="row g-0">
+                        <!-- Left: Form Side -->
+                        <div class="col-lg-6 p-3 p-lg-4">
+                            <div class="text-center mb-2">
+                                <a href="index.html" class="text-primary small text-decoration-none"><i
+                                        class="fas fa-arrow-left me-2"></i> Back to Home</a>
+                            </div>
+
+                            <div class="text-center mb-2">
+                                <h2 class="fw-bold text-primary">Register</h2>
+                                <p class="text-muted">Create your account to start your wellness journey.</p>
+                            </div>
+
+                            <form id="signupForm">
+                                <label class="form-label fw-bold text-muted">Full Name</label>
+                                <input class="form-control mb-3 auth-input-modern" type="text"
+                                    id="name" placeholder="John Doe" pattern="[A-Za-z\s]+"
+                                    oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')" required>
+
+                                <label class="form-label fw-bold text-muted mb-2">I am a</label>
+                                <div class="modern-role-selector mb-4">
+                                    <input type="radio" class="btn-check" name="role" id="regPatient" value="Patient"
+                                        checked autocomplete="off">
+                                    <label class="role-item" for="regPatient">
+                                        <i class="fas fa-user"></i>
+                                        <span>Patient</span>
+                                    </label>
+
+                                    <input type="radio" class="btn-check" name="role" id="regTherapist" value="Therapist"
+                                        autocomplete="off">
+                                    <label class="role-item" for="regTherapist">
+                                        <i class="fas fa-user-md"></i>
+                                        <span>Therapist</span>
+                                    </label>
+
+                                    <input type="radio" class="btn-check" name="role" id="regAdmin" value="Admin"
+                                        autocomplete="off">
+                                    <label class="role-item" for="regAdmin">
+                                        <i class="fas fa-shield-alt"></i>
+                                        <span>Admin</span>
+                                    </label>
+                                </div>
+
+                                <label class="form-label fw-bold text-muted">Email Address</label>
+                                <input class="form-control mb-3 auth-input-modern" type="email"
+                                    id="email" placeholder="name@stackly.com" required>
+
+                                <label class="form-label fw-bold text-muted">Password</label>
+                                <div class="input-group mb-1">
+                                    <input class="form-control auth-input-modern" type="password"
+                                        id="password" placeholder="Enter password" minlength="8" required>
+                                    <button class="btn btn-outline-secondary toggle-password" type="button">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                <!-- Strength bar -->
+                                <div class="mb-1"
+                                    style="height:4px;border-radius:4px;background:rgba(255,255,255,0.1);overflow:hidden;">
+                                    <div id="strengthBar"
+                                        style="height:100%;width:0;transition:width 0.3s, background 0.3s;"></div>
+                                </div>
+                                <div class="mb-3"></div>
+
+                                <label class="form-label fw-bold text-muted">Confirm Password</label>
+                                <div class="input-group mb-1">
+                                    <input class="form-control auth-input-modern" type="password"
+                                        id="confirmPassword" placeholder="Confirm password" required>
+                                    <button class="btn btn-outline-secondary toggle-password" type="button">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                <div id="matchMsg" style="font-size:.76rem;min-height:1.1rem;margin-bottom:.75rem;">
+                                </div>
+
+                                <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" id="terms" required>
+                                    <label class="form-check-label small text-muted" for="terms">
+                                        I accept the <a href="404.html"
+                                            class="text-primary fw-bold text-decoration-none">Terms & Conditions</a>
+                                    </label>
+                                </div>
+
+                                <button class="btn thm-btn-premium w-100 mb-3 py-3 fw-bold shadow-lg">Register Account</button>
+
+                                <p class="text-center mb-0 small text-muted">Already have an account? <a
+                                        href="login.html" class="text-primary fw-bold text-decoration-none">Login
+                                        Here</a></p>
+                            </form>
+                        </div>
+
+                        <!-- Right: Image Side -->
+                        <div class="col-lg-6 d-none d-lg-block">
+                            <div class="auth-image-side" style="background-image: url('./assets/images/blog-2.webp');">
+                                <div class="auth-image-overlay">
+                                    <a href="index.html" class="mb-4">
+                                        <img src="assets/images/logoStackly.webp" alt="Logo"
+                                            style="height: 60px; filter: brightness(0) invert(1);">
+                                    </a>
+                                    <h2 class="display-5 fw-bold text-white">Find Your Balance</h2>
+                                    <p class="lead text-white-50">Join our clinic and take the first step toward a healthier, more balanced mind.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script>
+        // Live password strength + rules
+        const pwdInput = document.getElementById('password');
+        const confInput = document.getElementById('confirmPassword');
+        const bar = document.getElementById('strengthBar');
+        const matchMsg = document.getElementById('matchMsg');
+        const rules = {
+            'r-len': v => v.length >= 8,
+            'r-upper': v => /[A-Z]/.test(v),
+            'r-num': v => /[0-9]/.test(v),
+            'r-sym': v => /[^A-Za-z0-9]/.test(v)
+        };
+        const colors = ['#ef4444', '#f97316', '#eab308', '#22C55E'];
+        const labels = ['Weak', 'Fair', 'Good', 'Strong'];
+
+        pwdInput.addEventListener('input', () => {
+            const v = pwdInput.value;
+            let passed = 0;
+            Object.values(rules).forEach(fn => {
+                if (fn(v)) passed++;
+            });
+            bar.style.width = (passed / 4 * 100) + '%';
+            bar.style.background = colors[passed - 1] || 'rgba(255,255,255,0.1)';
+            bar.title = labels[passed - 1] || '';
+            checkMatch();
+        });
+
+        confInput.addEventListener('input', checkMatch);
+
+        function checkMatch() {
+            if (!confInput.value) { matchMsg.textContent = ''; return; }
+            if (confInput.value === pwdInput.value) {
+                matchMsg.style.color = '#22C55E';
+                matchMsg.innerHTML = '<i class="fas fa-check-circle me-1"></i>Passwords match';
+            } else {
+                matchMsg.style.color = '#ef4444';
+                matchMsg.innerHTML = '<i class="fas fa-times-circle me-1"></i>Passwords do not match';
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({
+                duration: 1000,
+                once: true
+            });
+        });
+    </script>
+
+</body>
+
+</html>
+

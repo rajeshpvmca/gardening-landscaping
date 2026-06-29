@@ -1,0 +1,436 @@
+/* 
+  Cultivated Nature - Premium Landscape Design 
+  Theme & Core Styling
+*/
+
+/* --- 1. Custom Variables & Theme Overrides --- */
+:root {
+  /* Premium Gardening & Landscaping Green Palette */
+  --bs-primary: #2d5a3f; /* Forest Green */
+  --bs-primary-rgb: 45, 90, 63;
+  
+  --bs-success: #4caf50; /* Vibrant Leaf Green */
+  --bs-success-rgb: 76, 175, 80;
+  
+  --bs-secondary: #7f8e79; /* Soft Sage Green */
+  --bs-secondary-rgb: 127, 142, 121;
+  
+  --bs-dark: #162c1f; /* Deep Pine / Charcoal Green */
+  --bs-dark-rgb: 22, 44, 31;
+  
+  --bs-light: #f4f7f4; /* Off-White with a hint of green */
+  --bs-light-rgb: 244, 247, 244;
+
+  --bs-body-bg: #f9fbf9; /* Clean, fresh background */
+  --bs-body-color: #2b362e; /* Dark earthy text */
+
+  /* Typography */
+  --font-heading: 'Source Serif 4', serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* --- 2. Typography Adjustments --- */
+body {
+  font-family: var(--font-body);
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .display-4, .display-5 {
+  font-family: var(--font-heading);
+  color: var(--bs-primary);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Custom utility for wide tracking */
+.tracking-widest {
+  letter-spacing: 0.15em !important;
+}
+
+/* Elegant Text Gradient */
+.text-gradient {
+  background: linear-gradient(135deg, var(--bs-primary), var(--bs-success));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Golden Star Color for Ratings */
+.text-gold {
+  color: #fbbf24 !important;
+}
+
+/* --- 3. Buttons & Controls --- */
+.btn {
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 0.8rem 1.75rem;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-success {
+  background-color: var(--bs-success);
+  border-color: var(--bs-success);
+  color: white;
+}
+
+.btn-success:hover, .btn-success:focus {
+  background-color: #3d8c40;
+  border-color: #3d8c40;
+}
+
+.btn-outline-light {
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+/* --- 4. Micro-Animations & Effects --- */
+
+/* Smooth scaling on hover for cards/images */
+.hover-scale {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease;
+}
+.group:hover .hover-scale, .hover-scale:hover {
+  transform: scale(1.03);
+}
+
+/* Elegant underline hover effect for text links */
+.hover-underline {
+  position: relative;
+  text-decoration: none;
+}
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: currentColor;
+  transform-origin: bottom right;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hover-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Soft bloom effect (Premium Shadow) */
+.soft-bloom {
+  box-shadow: 0 15px 35px rgba(22, 44, 31, 0.06);
+  transition: box-shadow 0.4s ease, transform 0.4s ease, border-color 0.4s ease;
+}
+.soft-bloom:hover, .group:hover .soft-bloom {
+  box-shadow: 0 25px 50px rgba(22, 44, 31, 0.12);
+  transform: translateY(-5px);
+}
+/* Custom Project Link Animation */
+.project-link:hover {
+  color: var(--bs-success) !important;
+}
+.project-link:hover .link-icon {
+  background-color: var(--bs-success) !important;
+  color: white;
+  transform: translateX(4px);
+}
+
+/* Premium Animated Button (Sweep from Center) */
+.btn-premium {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 2.25rem;
+  border-radius: 50px;
+  background-color: var(--bs-success);
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  overflow: hidden;
+  border: none;
+  z-index: 1;
+  transition: color 0.4s ease, transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(25, 135, 84, 0.2);
+}
+
+.btn-premium::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #061b0e;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.btn-premium:hover {
+  color: #ffffff !important;
+  box-shadow: 0 8px 25px rgba(6, 27, 14, 0.3);
+}
+
+.btn-premium:hover::before {
+  transform: scaleX(1);
+}
+
+.btn-premium-outline {
+  background-color: transparent;
+  border: 2px solid var(--bs-success);
+  color: var(--bs-success);
+  box-shadow: none;
+}
+
+.btn-premium-outline::before {
+  background-color: var(--bs-success);
+}
+
+.btn-premium-outline:hover {
+  color: #ffffff !important;
+  border-color: var(--bs-success);
+  box-shadow: 0 8px 25px rgba(25, 135, 84, 0.3);
+}
+
+/* Premium Animated Secondary Button (Light) */
+.btn-premium-light {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 2.25rem;
+  border-radius: 50px;
+  background-color: transparent;
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  z-index: 1;
+  transition: color 0.4s ease, border-color 0.4s ease;
+}
+
+.btn-premium-light::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.btn-premium-light:hover {
+  color: #061b0e !important;
+  border-color: #ffffff;
+}
+
+.btn-premium-light:hover::before {
+  transform: scaleX(1);
+}
+
+/* Infinite Scrolling Marquee */
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 1rem)); } /* -50% minus half the gap */
+}
+.marquee-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding-bottom: 2rem;
+}
+.marquee-wrapper::before,
+.marquee-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.marquee-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #ffffff, transparent);
+}
+.marquee-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #ffffff, transparent);
+}
+.marquee-container {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 35s linear infinite;
+  will-change: transform;
+}
+.marquee-container:hover {
+  animation-play-state: paused;
+}
+
+/* Hero Carousel Zoom Effect */
+.hero-slide-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1);
+  transition: transform 8s ease-in-out;
+  z-index: 0;
+}
+.carousel-item.active .hero-slide-bg {
+  transform: scale(1.1);
+}
+.hero-overlay {
+  background: linear-gradient(to right, rgba(6, 27, 14, 0.9) 0%, rgba(6, 27, 14, 0.4) 60%, rgba(6, 27, 14, 0.2) 100%);
+  z-index: 1;
+}
+
+/* Interactive Gradient Border Effect for Cards */
+.border-gradient-hover {
+  border: 1px solid rgba(0,0,0,0.05);
+  position: relative;
+}
+.border-gradient-hover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(135deg, var(--bs-primary), var(--bs-success));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+.border-gradient-hover:hover::before {
+  opacity: 1;
+}
+
+/* Organic Shape Utilities */
+.shape-organic {
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  animation: morph 8s ease-in-out infinite;
+}
+
+@keyframes morph {
+  0%, 100% {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  }
+  34% {
+    border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+  }
+  67% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+  }
+}
+
+/* --- 5. Component Overrides --- */
+
+/* Navbar Active State Modern Styling */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0px;
+  left: 50%;
+  background: var(--bs-success);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+.nav-link:hover::after {
+  width: 60%;
+}
+.nav-link.active {
+  color: var(--bs-success) !important;
+}
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Badges */
+.badge {
+  font-family: var(--font-body);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Slider Custom Scrollbar Hiding */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Glassmorphism for specific floating elements */
+.backdrop-blur-md {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background-color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.backdrop-blur-dark {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background-color: rgba(22, 44, 31, 0.7) !important;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Icons */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+/* Section Background Adjustments */
+.bg-light {
+  background-color: var(--bs-light) !important;
+}
+
+/* Background image utility classes */
+.bg-cover {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bg-center {
+  background-position: center;
+}
+.bg-fixed {
+  background-attachment: fixed;
+}
