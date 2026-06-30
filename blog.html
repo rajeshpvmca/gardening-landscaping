@@ -95,7 +95,7 @@
                         
                         <div class="row g-4">
                             <!-- Card 1 -->
-                            <div class="col-md-6" data-aos="fade-up">
+                            <div class="col-md-6 blog-article" data-aos="fade-up">
                                 <article class="bg-white rounded-4 overflow-hidden soft-bloom h-100 group cursor-pointer border-gradient-hover d-flex flex-column">
                                     <div class="position-relative overflow-hidden flex-shrink-0" style="height: 240px;">
                                         <img class="w-100 h-100 object-fit-cover transition-all duration-500 group-hover-scale" src="assets/images/img_local_11.webp" alt="Hardscape" />
@@ -117,7 +117,7 @@
                             </div>
                             
                             <!-- Card 2 -->
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                            <div class="col-md-6 blog-article" data-aos="fade-up" data-aos-delay="100">
                                 <article class="bg-white rounded-4 overflow-hidden soft-bloom h-100 group cursor-pointer border-gradient-hover d-flex flex-column">
                                     <div class="position-relative overflow-hidden flex-shrink-0" style="height: 240px;">
                                         <img class="w-100 h-100 object-fit-cover transition-all duration-500 group-hover-scale" src="assets/images/img_local_12.webp" alt="Maintenance" />
@@ -139,7 +139,7 @@
                             </div>
                             
                             <!-- Card 3 -->
-                            <div class="col-md-6" data-aos="fade-up">
+                            <div class="col-md-6 blog-article" data-aos="fade-up">
                                 <article class="bg-white rounded-4 overflow-hidden soft-bloom h-100 group cursor-pointer border-gradient-hover d-flex flex-column">
                                     <div class="position-relative overflow-hidden flex-shrink-0" style="height: 240px;">
                                         <img class="w-100 h-100 object-fit-cover transition-all duration-500 group-hover-scale" src="assets/images/img_local_13.webp" alt="Ecology" />
@@ -161,7 +161,7 @@
                             </div>
                             
                             <!-- Card 4 -->
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                            <div class="col-md-6 blog-article" data-aos="fade-up" data-aos-delay="100">
                                 <article class="bg-white rounded-4 overflow-hidden soft-bloom h-100 group cursor-pointer border-gradient-hover d-flex flex-column">
                                     <div class="position-relative overflow-hidden flex-shrink-0" style="height: 240px;">
                                         <img class="w-100 h-100 object-fit-cover transition-all duration-500 group-hover-scale" src="assets/images/img_local_14.webp" alt="Design" />
@@ -192,7 +192,7 @@
                         <h2 class="display-6 fw-bold text-primary mb-5 position-relative z-1">From the Archive</h2>
                         
                         <div class="d-flex flex-column gap-4 position-relative z-1">
-                            <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between group cursor-pointer border-bottom pb-4">
+                            <div class="blog-article d-flex flex-column flex-md-row align-items-md-center justify-content-between group cursor-pointer border-bottom pb-4">
                                 <div>
                                     <span class="small text-success fw-bold text-uppercase tracking-widest d-block mb-1">Horticulture</span>
                                     <h4 class="h5 fw-bold text-primary mb-2 transition-colors group-hover-text-success">Winterizing Delicate Perennials</h4>
@@ -201,7 +201,7 @@
                                 <a href="404.html" class="btn btn-premium-outline btn-sm rounded-pill px-4 py-2 fw-bold transition-all shadow-sm mt-3 mt-md-0">Read More</a>
                             </div>
                             
-                            <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between group cursor-pointer border-bottom pb-4">
+                            <div class="blog-article d-flex flex-column flex-md-row align-items-md-center justify-content-between group cursor-pointer border-bottom pb-4">
                                 <div>
                                     <span class="small text-success fw-bold text-uppercase tracking-widest d-block mb-1">Design Trends</span>
                                     <h4 class="h5 fw-bold text-primary mb-2 transition-colors group-hover-text-success">Top 10 Landscape Trends for 2024</h4>
@@ -210,7 +210,7 @@
                                 <a href="404.html" class="btn btn-premium-outline btn-sm rounded-pill px-4 py-2 fw-bold transition-all shadow-sm mt-3 mt-md-0">Read More</a>
                             </div>
                             
-                            <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between group cursor-pointer pb-2">
+                            <div class="blog-article d-flex flex-column flex-md-row align-items-md-center justify-content-between group cursor-pointer pb-2">
                                 <div>
                                     <span class="small text-success fw-bold text-uppercase tracking-widest d-block mb-1">Case Study</span>
                                     <h4 class="h5 fw-bold text-primary mb-2 transition-colors group-hover-text-success">The Oakwood Estate Transformation</h4>
@@ -228,40 +228,40 @@
                     <!-- Section 3: Search and Category Filter -->
                     <div class="bg-white p-4 rounded-4 soft-bloom border border-success border-opacity-10" data-aos="fade-left">
                         <div class="position-relative mb-4">
-                            <input type="text" class="form-control form-control-lg bg-light border-0 ps-5 rounded-3" placeholder="Search articles..." />
+                            <input type="text" id="blogSearchInput" class="form-control form-control-lg bg-light border-0 ps-5 rounded-3" placeholder="Search articles..." />
                             <span class="material-symbols-outlined position-absolute top-50 start-0 translate-middle-y ms-3 text-secondary">search</span>
                         </div>
                         
                         <div>
                             <h3 class="small text-success fw-bold text-uppercase tracking-widest mb-3">Categories</h3>
                             <div class="d-flex flex-column gap-3">
-                                <a href="404.html" class="d-flex justify-content-between align-items-center w-100 text-start py-3 px-4 fw-bold rounded-4 text-decoration-none transition-all group bg-success bg-opacity-10 text-success border border-success border-opacity-25 shadow-sm">
+                                <a href="404.html" class="category-link d-flex justify-content-between align-items-center w-100 text-start py-3 px-4 fw-bold rounded-4 text-decoration-none transition-all border">
                                     <div class="d-flex align-items-center gap-3">
-                                        <span class="material-symbols-outlined fs-5">yard</span>
-                                        <span>Garden Design</span>
+                                        <span class="material-symbols-outlined fs-5 transition-colors">yard</span>
+                                        <span class="transition-colors">Garden Design</span>
                                     </div>
-                                    <span class="badge bg-success text-white rounded-pill px-3 py-2 shadow-sm">12</span>
+                                    <span class="badge bg-secondary bg-opacity-10 text-secondary rounded-pill px-3 py-2 transition-all">12</span>
                                 </a>
-                                <a href="404.html" class="d-flex justify-content-between align-items-center w-100 text-start py-3 px-4 fw-bold rounded-4 text-decoration-none transition-all group bg-light text-secondary hover-bg-light-success">
+                                <a href="404.html" class="category-link d-flex justify-content-between align-items-center w-100 text-start py-3 px-4 fw-bold rounded-4 text-decoration-none transition-all border">
                                     <div class="d-flex align-items-center gap-3">
-                                        <span class="material-symbols-outlined fs-5 transition-colors group-hover-text-success">eco</span>
-                                        <span class="transition-colors group-hover-text-success">Sustainable Living</span>
+                                        <span class="material-symbols-outlined fs-5 transition-colors">eco</span>
+                                        <span class="transition-colors">Sustainable Living</span>
                                     </div>
-                                    <span class="badge bg-secondary bg-opacity-10 text-secondary rounded-pill px-3 py-2 transition-all group-hover-bg-success group-hover-text-white">8</span>
+                                    <span class="badge bg-secondary bg-opacity-10 text-secondary rounded-pill px-3 py-2 transition-all">8</span>
                                 </a>
-                                <a href="404.html" class="d-flex justify-content-between align-items-center w-100 text-start py-3 px-4 fw-bold rounded-4 text-decoration-none transition-all group bg-light text-secondary hover-bg-light-success">
+                                <a href="404.html" class="category-link d-flex justify-content-between align-items-center w-100 text-start py-3 px-4 fw-bold rounded-4 text-decoration-none transition-all border">
                                     <div class="d-flex align-items-center gap-3">
-                                        <span class="material-symbols-outlined fs-5 transition-colors group-hover-text-success">architecture</span>
-                                        <span class="transition-colors group-hover-text-success">Hardscaping</span>
+                                        <span class="material-symbols-outlined fs-5 transition-colors">architecture</span>
+                                        <span class="transition-colors">Hardscaping</span>
                                     </div>
-                                    <span class="badge bg-secondary bg-opacity-10 text-secondary rounded-pill px-3 py-2 transition-all group-hover-bg-success group-hover-text-white">5</span>
+                                    <span class="badge bg-secondary bg-opacity-10 text-secondary rounded-pill px-3 py-2 transition-all">5</span>
                                 </a>
-                                <a href="404.html" class="d-flex justify-content-between align-items-center w-100 text-start py-3 px-4 fw-bold rounded-4 text-decoration-none transition-all group bg-light text-secondary hover-bg-light-success">
+                                <a href="404.html" class="category-link d-flex justify-content-between align-items-center w-100 text-start py-3 px-4 fw-bold rounded-4 text-decoration-none transition-all border">
                                     <div class="d-flex align-items-center gap-3">
-                                        <span class="material-symbols-outlined fs-5 transition-colors group-hover-text-success">local_florist</span>
-                                        <span class="transition-colors group-hover-text-success">Plant Care</span>
+                                        <span class="material-symbols-outlined fs-5 transition-colors">local_florist</span>
+                                        <span class="transition-colors">Plant Care</span>
                                     </div>
-                                    <span class="badge bg-secondary bg-opacity-10 text-secondary rounded-pill px-3 py-2 transition-all group-hover-bg-success group-hover-text-white">19</span>
+                                    <span class="badge bg-secondary bg-opacity-10 text-secondary rounded-pill px-3 py-2 transition-all">19</span>
                                 </a>
                             </div>
                         </div>
@@ -272,9 +272,9 @@
                         <div class="position-relative z-1">
                             <h3 class="h4 text-white fw-bold mb-2">The Green Letter</h3>
                             <p class="small opacity-75 mb-4">Seasonal tips and exclusive landscaping insights delivered to your inbox.</p>
-                            <form>
-                                <input type="email" class="form-control bg-white bg-opacity-10 border-0 text-white mb-3 placeholder-white" placeholder="Email address" />
-                                <button class="btn btn-premium w-100 fw-bold rounded-3 hover-scale">Subscribe Now</button>
+                            <form action="404.html">
+                                <input type="email" class="form-control bg-white bg-opacity-10 border-0 text-white mb-3 placeholder-visible" placeholder="Email address" required />
+                                <button type="submit" class="btn btn-premium w-100 fw-bold rounded-3 hover-scale">Subscribe Now</button>
                             </form>
                         </div>
                         <div class="position-absolute opacity-10" style="bottom: -2rem; right: -2rem;">
@@ -297,13 +297,13 @@
                     <div class="bg-white p-4 rounded-4 soft-bloom border border-success border-opacity-10" data-aos="fade-left" data-aos-delay="300">
                         <h3 class="small text-success fw-bold text-uppercase tracking-widest mb-3">Popular Topics</h3>
                         <div class="d-flex flex-wrap gap-2">
-                            <a href="404.html" class="badge bg-light text-secondary text-decoration-none py-2 px-3 fw-normal hover-bg-success text-dark">Drought-Resistant</a>
-                            <a href="404.html" class="badge bg-light text-secondary text-decoration-none py-2 px-3 fw-normal hover-bg-success text-dark">Urban Gardens</a>
-                            <a href="404.html" class="badge bg-light text-secondary text-decoration-none py-2 px-3 fw-normal hover-bg-success text-dark">Lighting</a>
-                            <a href="404.html" class="badge bg-light text-secondary text-decoration-none py-2 px-3 fw-normal hover-bg-success text-dark">Soil Health</a>
-                            <a href="404.html" class="badge bg-light text-secondary text-decoration-none py-2 px-3 fw-normal hover-bg-success text-dark">Privacy</a>
-                            <a href="404.html" class="badge bg-light text-secondary text-decoration-none py-2 px-3 fw-normal hover-bg-success text-dark">Japanese Design</a>
-                            <a href="404.html" class="badge bg-light text-secondary text-decoration-none py-2 px-3 fw-normal hover-bg-success text-dark">Mulching</a>
+                            <a href="404.html" class="topic-tag badge text-decoration-none py-2 px-3 fw-normal transition-all border">Drought-Resistant</a>
+                            <a href="404.html" class="topic-tag badge text-decoration-none py-2 px-3 fw-normal transition-all border">Urban Gardens</a>
+                            <a href="404.html" class="topic-tag badge text-decoration-none py-2 px-3 fw-normal transition-all border">Lighting</a>
+                            <a href="404.html" class="topic-tag badge text-decoration-none py-2 px-3 fw-normal transition-all border">Soil Health</a>
+                            <a href="404.html" class="topic-tag badge text-decoration-none py-2 px-3 fw-normal transition-all border">Privacy</a>
+                            <a href="404.html" class="topic-tag badge text-decoration-none py-2 px-3 fw-normal transition-all border">Japanese Design</a>
+                            <a href="404.html" class="topic-tag badge text-decoration-none py-2 px-3 fw-normal transition-all border">Mulching</a>
                         </div>
                     </div>
 
@@ -312,9 +312,9 @@
                         <h3 class="h5 text-success fw-bold mb-2">Inspired by what you read?</h3>
                         <p class="small opacity-75 mb-4">Share our insights with your network of fellow garden enthusiasts.</p>
                         <div class="d-flex justify-content-center gap-3">
-                            <button class="btn btn-premium-outline rounded-circle p-2 hover-scale"><span class="material-symbols-outlined d-block">share</span></button>
-                            <button class="btn btn-premium-outline rounded-circle p-2 hover-scale"><span class="material-symbols-outlined d-block">chat</span></button>
-                            <button class="btn btn-premium-outline rounded-circle p-2 hover-scale"><span class="material-symbols-outlined d-block">alternate_email</span></button>
+                            <a href="404.html" class="btn btn-premium-outline rounded-circle p-2 hover-scale text-decoration-none"><span class="material-symbols-outlined d-block">share</span></a>
+                            <a href="404.html" class="btn btn-premium-outline rounded-circle p-2 hover-scale text-decoration-none"><span class="material-symbols-outlined d-block">chat</span></a>
+                            <a href="404.html" class="btn btn-premium-outline rounded-circle p-2 hover-scale text-decoration-none"><span class="material-symbols-outlined d-block">alternate_email</span></a>
                         </div>
                     </div>
                 </aside>
@@ -330,6 +330,61 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Main JS (Injects Header/Footer & Inits AOS) -->
     <script src="js/main.js"></script>
+
+    <style>
+        .category-link { background-color: #f8f9fa; color: #6c757d; border-color: transparent !important; }
+        .category-link:hover { background-color: rgba(25,135,84,0.1) !important; color: var(--bs-success) !important; border-color: rgba(25,135,84,0.25) !important; }
+        .category-link:hover .badge { background-color: var(--bs-success) !important; color: white !important; }
+        .category-link:hover .material-symbols-outlined { color: var(--bs-success) !important; }
+
+        .topic-tag { background-color: #f8f9fa; color: #6c757d; }
+        .topic-tag:hover { background-color: var(--bs-success) !important; color: white !important; }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('blogSearchInput');
+            const articles = document.querySelectorAll('.blog-article');
+
+            if (searchInput) {
+                searchInput.addEventListener('input', (e) => {
+                    const term = e.target.value.toLowerCase();
+                    let visibleCount = 0;
+                    
+                    articles.forEach(article => {
+                        const text = article.textContent.toLowerCase();
+                        if (text.includes(term)) {
+                            article.style.display = '';
+                            visibleCount++;
+                        } else {
+                            article.style.display = 'none';
+                        }
+                    });
+
+                });
+
+                searchInput.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        const term = e.target.value.toLowerCase();
+                        let visibleCount = 0;
+                        
+                        articles.forEach(article => {
+                            const text = article.textContent.toLowerCase();
+                            if (text.includes(term)) {
+                                visibleCount++;
+                            }
+                        });
+
+                        // If zero matching articles found and input is not empty, redirect to 404 on Enter
+                        if (visibleCount === 0 && term.trim() !== '') {
+                            window.location.href = '404.html';
+                        }
+                    }
+                });
+            }
+        });
+    </script>
     
     <script>
         // Additional hover utilities
