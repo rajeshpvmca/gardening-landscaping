@@ -161,9 +161,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .display-4, .display-5 {
   font-weight: 700;
   text-decoration: none;
   overflow: hidden;
-  border: none;
+  border: 2px solid var(--bs-success);
   z-index: 1;
-  transition: color 0.4s ease, transform 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 15px rgba(25, 135, 84, 0.2);
 }
 
@@ -174,37 +174,64 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .display-4, .display-5 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #061b0e;
-  z-index: -1;
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  background-color: rgba(255, 255, 255, 0.15);
+  z-index: 1;
+  transform: translateX(-100%);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
 }
 
 .btn-premium:hover {
+  background-color: #145c38; /* A rich, darker green */
+  border-color: #145c38;
   color: #ffffff !important;
-  box-shadow: 0 8px 25px rgba(6, 27, 14, 0.3);
+  box-shadow: 0 8px 25px rgba(25, 135, 84, 0.4);
+  transform: translateY(-3px);
 }
 
 .btn-premium:hover::before {
-  transform: scaleX(1);
+  transform: translateX(0);
 }
 
 .btn-premium-outline {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 2.25rem;
+  border-radius: 50px;
   background-color: transparent;
   border: 2px solid var(--bs-success);
   color: var(--bs-success);
-  box-shadow: none;
+  font-weight: 700;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-premium-outline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: var(--bs-success);
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-premium-outline:hover {
   color: #ffffff !important;
-  border-color: var(--bs-success);
   box-shadow: 0 8px 25px rgba(25, 135, 84, 0.3);
+  transform: translateY(-3px);
+}
+
+.btn-premium-outline:hover::before {
+  transform: scaleX(1);
 }
 
 /* Premium Animated Secondary Button (Light) */
