@@ -525,3 +525,4 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .display-4, .display-5 {
 .feature-card-hover:hover .icon-circle span {
   color: var(--bs-success) !important;
 }
+
