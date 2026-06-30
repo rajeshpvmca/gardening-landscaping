@@ -1,3 +1,20 @@
+// Inject Global Preloader Immediately
+(function() {
+    // Only run on main pages (exclude dashboard iframe pages if necessary, though they don't load main.js)
+    if (!document.getElementById('grand-preloader')) {
+        const preloaderHTML = `
+            <div id="grand-preloader" class="preloader-overlay">
+                <div class="preloader-content">
+                    <div class="spinner-ring"></div>
+                    <span class="material-symbols-outlined preloader-icon">psychiatry</span>
+                </div>
+                <h3 class="preloader-text mt-4 text-white fw-bold tracking-widest text-uppercase" style="font-family: 'Source Serif 4', serif;">Cultivating <span class="text-success">Nature</span></h3>
+            </div>
+        `;
+        document.write(preloaderHTML); // Ensures it renders immediately before DOMContentLoaded
+    }
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
     // Load Header and Footer dynamically
     Promise.all([
@@ -22,13 +39,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Initialize AOS after dynamic content is loaded, in case we have AOS in header/footer
+        // Initialize AOS after dynamic content is loaded and preloader finishes
         if (typeof AOS !== 'undefined') {
-            AOS.init({
-                duration: 800,
-                once: true,
-                offset: 50
-            });
+            setTimeout(() => {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: 50
+                });
+            }, 2500); // Wait for the 2.5s preloader
         }
     }).catch(error => console.error("Error loading header/footer:", error));
 
@@ -131,4 +150,26 @@ document.addEventListener('DOMContentLoaded', () => {
         testimonialSlider.addEventListener('touchstart', () => isPaused = true, {passive: true});
         testimonialSlider.addEventListener('touchend', () => isPaused = false);
     }
+
+    // Remove Preloader after 2.5 seconds
+    setTimeout(() => {
+        const preloader = document.getElementById('grand-preloader');
+        if(preloader) {
+            preloader.classList.add('fade-out');
+            setTimeout(() => { 
+                preloader.style.display = 'none'; 
+                document.body.classList.add('preloader-done'); // Triggers CSS hero animations
+                
+                // Manually start the hero carousel now that preloader is done
+                const heroCarousel = document.getElementById('heroSyncCarousel');
+                if (heroCarousel && typeof bootstrap !== 'undefined') {
+                    const bsCarousel = new bootstrap.Carousel(heroCarousel);
+                    bsCarousel.cycle();
+                }
+            }, 800);
+        } else {
+            // If no preloader exists (e.g., fallback), just trigger animations immediately
+            document.body.classList.add('preloader-done');
+        }
+    }, 2500);
 });
