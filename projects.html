@@ -110,27 +110,27 @@
         <!-- Hero & Filter Section -->
         <section class="py-5 px-4 px-md-5 overflow-hidden">
             <div class="container-xl" data-aos="fade-up">
-                <div class="text-center mb-5 pb-lg-4">
+                <div class="text-center mb-5">
                     <h1 class="display-6 fw-bold text-gradient mb-4">Our Living Portfolio</h1>
                     <p class="lead text-secondary mx-auto" style="max-width: 700px;">Discover how we blend professional expertise with organic beauty to transform outdoor spaces into sanctuary-like experiences.</p>
                 </div>
                 
                 <!-- Filter by project type -->
-                <div class="d-flex flex-wrap justify-content-center gap-3 mb-5">
-                    <button class="btn btn-premium rounded-pill px-4 fw-bold shadow-sm">All Works</button>
-                    <button class="btn btn-light rounded-pill px-4 text-secondary border hover-scale">Modern</button>
-                    <button class="btn btn-light rounded-pill px-4 text-secondary border hover-scale">English Garden</button>
-                    <button class="btn btn-light rounded-pill px-4 text-secondary border hover-scale">Zen Sanctuary</button>
-                    <button class="btn btn-light rounded-pill px-4 text-secondary border hover-scale">Commercial</button>
+                <div class="d-flex flex-wrap justify-content-center gap-3" id="portfolio-filters">
+                    <button class="btn btn-premium rounded-pill px-4 fw-bold shadow-sm filter-btn" data-filter="all">All Works</button>
+                    <button class="btn btn-light rounded-pill px-4 text-secondary border hover-scale filter-btn" data-filter="modern">Modern</button>
+                    <button class="btn btn-light rounded-pill px-4 text-secondary border hover-scale filter-btn" data-filter="english">English Garden</button>
+                    <button class="btn btn-light rounded-pill px-4 text-secondary border hover-scale filter-btn" data-filter="zen">Zen Sanctuary</button>
+                    <button class="btn btn-light rounded-pill px-4 text-secondary border hover-scale filter-btn" data-filter="commercial">Commercial</button>
                 </div>
             </div>
         </section>
 
         <!-- Visual Portfolio Showcase (Masonry grid) -->
-        <section class="pb-5 pb-lg-6 px-4 px-md-5 overflow-hidden">
+        <section class="pb-4 px-4 px-md-5 overflow-hidden">
             <div class="container-xl">
-                <div class="portfolio-masonry" data-aos="fade-up" data-aos-delay="100">
-                    <div class="portfolio-item">
+                <div class="portfolio-masonry" id="portfolio-grid" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-item transition-all" data-category="modern">
                         <div class="position-relative overflow-hidden rounded-4 soft-bloom border-gradient-hover group">
                             <img class="w-100 h-auto object-fit-cover hover-scale" src="assets/images/img_local_28.webp" alt="Modern" />
                             <div class="position-absolute bottom-0 start-0 w-100 p-4 opacity-0 group-hover-opacity-100 transition-opacity" style="background: linear-gradient(to top, rgba(22,44,31,0.9), transparent);">
@@ -140,7 +140,7 @@
                         </div>
                     </div>
                     
-                    <div class="portfolio-item">
+                    <div class="portfolio-item transition-all" data-category="english">
                         <div class="position-relative overflow-hidden rounded-4 soft-bloom border-gradient-hover group">
                             <img class="w-100 h-auto object-fit-cover hover-scale" src="assets/images/img_local_29.webp" alt="English" />
                             <div class="position-absolute bottom-0 start-0 w-100 p-4 opacity-0 group-hover-opacity-100 transition-opacity" style="background: linear-gradient(to top, rgba(22,44,31,0.9), transparent);">
@@ -150,7 +150,7 @@
                         </div>
                     </div>
                     
-                    <div class="portfolio-item">
+                    <div class="portfolio-item transition-all" data-category="zen">
                         <div class="position-relative overflow-hidden rounded-4 soft-bloom border-gradient-hover group">
                             <img class="w-100 h-auto object-fit-cover hover-scale" src="assets/images/img_local_30.webp" alt="Zen" />
                             <div class="position-absolute bottom-0 start-0 w-100 p-4 opacity-0 group-hover-opacity-100 transition-opacity" style="background: linear-gradient(to top, rgba(22,44,31,0.9), transparent);">
@@ -160,7 +160,7 @@
                         </div>
                     </div>
                     
-                    <div class="portfolio-item">
+                    <div class="portfolio-item transition-all" data-category="commercial">
                         <div class="position-relative overflow-hidden rounded-4 soft-bloom border-gradient-hover group">
                             <img class="w-100 h-auto object-fit-cover hover-scale" src="assets/images/img_local_31.webp" alt="Commercial" />
                             <div class="position-absolute bottom-0 start-0 w-100 p-4 opacity-0 group-hover-opacity-100 transition-opacity" style="background: linear-gradient(to top, rgba(22,44,31,0.9), transparent);">
@@ -170,9 +170,9 @@
                         </div>
                     </div>
 
-                    <div class="portfolio-item">
+                    <div class="portfolio-item transition-all" data-category="modern">
                         <div class="position-relative overflow-hidden rounded-4 soft-bloom border-gradient-hover group">
-                            <img class="w-100 h-auto object-fit-cover hover-scale" src="assets/images/img_local_32.webp" alt="Modern Social" />
+                            <img class="w-100 h-auto object-fit-cover hover-scale" src="assets/images/img_local_36.webp" alt="Modern Social" />
                             <div class="position-absolute bottom-0 start-0 w-100 p-4 opacity-0 group-hover-opacity-100 transition-opacity" style="background: linear-gradient(to top, rgba(22,44,31,0.9), transparent);">
                                 <span class="badge bg-success bg-opacity-25 text-success border border-success border-opacity-50 text-uppercase tracking-widest mb-2">Modern</span>
                                 <h3 class="h5 fw-bold text-white mb-0">Azure Ridge Social</h3>
@@ -180,7 +180,7 @@
                         </div>
                     </div>
 
-                    <div class="portfolio-item">
+                    <div class="portfolio-item transition-all" data-category="special">
                         <div class="position-relative overflow-hidden rounded-4 soft-bloom border-gradient-hover group">
                             <img class="w-100 h-auto object-fit-cover hover-scale" src="assets/images/img_local_33.webp" alt="Special Feature" />
                             <div class="position-absolute bottom-0 start-0 w-100 p-4 opacity-0 group-hover-opacity-100 transition-opacity" style="background: linear-gradient(to top, rgba(22,44,31,0.9), transparent);">
@@ -379,8 +379,8 @@
                         <h2 class="display-6 fw-bold text-white mb-4">Ready to create your own sanctuary?</h2>
                         <p class="lead text-white opacity-75 mb-5 max-w-2xl mx-auto">From initial sketch to the final stone, we guide you through every step of your landscape's evolution.</p>
                         <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
-                            <button class="btn btn-premium px-5 py-3 rounded-pill fw-bold hover-scale">Start Your Transformation</button>
-                            <button class="btn btn-premium-outline px-5 py-3 rounded-pill fw-bold hover-scale">Download Design Guide</button>
+                            <a href="404.html" class="btn btn-premium px-5 py-3 rounded-pill fw-bold hover-scale text-decoration-none">Start Your Transformation</a>
+                            <a href="404.html" class="btn btn-premium-outline px-5 py-3 rounded-pill fw-bold hover-scale text-decoration-none">Download Design Guide</a>
                         </div>
                     </div>
                 </div>
@@ -396,6 +396,37 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Main JS (Injects Header/Footer & Inits AOS) -->
     <script src="js/main.js"></script>
+
+    <!-- Portfolio Filtering Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Update active button styling
+                    filterBtns.forEach(b => {
+                        b.classList.remove('btn-premium', 'fw-bold', 'shadow-sm');
+                        b.classList.add('btn-light', 'text-secondary', 'border', 'hover-scale');
+                    });
+                    this.classList.remove('btn-light', 'text-secondary', 'border', 'hover-scale');
+                    this.classList.add('btn-premium', 'fw-bold', 'shadow-sm');
+
+                    // Filter items
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
     
     <script>
         // Before and After Slider Logic

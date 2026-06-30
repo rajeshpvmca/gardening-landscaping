@@ -526,3 +526,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .display-4, .display-5 {
   color: var(--bs-success) !important;
 }
 
+
+.placeholder-visible::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+  opacity: 1 !important;
+}
