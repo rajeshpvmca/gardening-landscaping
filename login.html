@@ -38,7 +38,7 @@
         }
 
         .auth-image-side {
-            background: url('./assets/images/about.webp') center/cover no-repeat;
+            background: url('./assets/images/hero2.png') center/cover no-repeat;
             position: relative;
             min-height: 100%;
             height: 100%;
@@ -47,7 +47,7 @@
         .auth-image-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(to bottom, rgba(0, 107, 86, 0.4), rgba(0, 107, 86, 0.9));
+            background: linear-gradient(to bottom, rgba(6, 27, 14, 0.4), rgba(6, 27, 14, 0.9));
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -82,8 +82,8 @@
         }
 
         .btn-check:checked+.role-item {
-            background: var(--primary);
-            border-color: var(--primary);
+            background: var(--bs-primary);
+            border-color: var(--bs-primary);
             color: white;
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 107, 86, 0.3);
@@ -94,14 +94,14 @@
         }
 
         .role-item:hover {
-            border-color: var(--primary-light);
+            border-color: var(--bs-success);
             transform: translateY(-2px);
         }
 
         /* Floating Icons Animation */
         .floating-icons .hero-shape {
             position: absolute;
-            color: var(--primary-light);
+            color: var(--bs-success);
             opacity: 0.2;
             z-index: 1;
             pointer-events: none;
@@ -128,7 +128,7 @@
 
         .auth-input-modern:focus {
             background: #ffffff !important;
-            border-color: var(--primary) !important;
+            border-color: var(--bs-primary) !important;
             box-shadow: 0 0 0 0.25rem rgba(0, 107, 86, 0.25);
         }
 
@@ -138,8 +138,8 @@
 
         /* checked */
         .form-check-input:checked {
-            background-color: var(--primary) !important;
-            border-color: var(--primary) !important;
+            background-color: var(--bs-primary) !important;
+            border-color: var(--bs-primary) !important;
         }
     </style>
 </head>
@@ -148,14 +148,14 @@
 
 
     <div class="floating-icons d-none d-md-block">
-        <span class="material-symbols-outlined hero-shape hero-shape-1">psychology</span>
-        <span class="material-symbols-outlined hero-shape hero-shape-2">favorite</span>
-        <span class="material-symbols-outlined hero-shape hero-shape-3">spa</span>
-        <span class="material-symbols-outlined hero-shape hero-shape-4">self_improvement</span>
+        <span class="material-symbols-outlined hero-shape hero-shape-1">eco</span>
+        <span class="material-symbols-outlined hero-shape hero-shape-2">park</span>
+        <span class="material-symbols-outlined hero-shape hero-shape-3">yard</span>
+        <span class="material-symbols-outlined hero-shape hero-shape-4">forest</span>
         <span class="material-symbols-outlined hero-shape hero-shape-5">water_drop</span>
-        <span class="material-symbols-outlined hero-shape hero-shape-6">sentiment_very_satisfied</span>
-        <span class="material-symbols-outlined hero-shape hero-shape-7">sunny</span>
-        <span class="material-symbols-outlined hero-shape hero-shape-8">groups</span>
+        <span class="material-symbols-outlined hero-shape hero-shape-6">grass</span>
+        <span class="material-symbols-outlined hero-shape hero-shape-7">potted_plant</span>
+        <span class="material-symbols-outlined hero-shape hero-shape-8">agriculture</span>
     </div>
 
     <div class="container position-relative py-3" style="z-index: 5;">
@@ -165,14 +165,14 @@
                     <div class="row g-0">
                         <!-- Left: Image Side -->
                         <div class="col-lg-6 d-none d-lg-block">
-                            <div class="auth-image-side" style="background-image: url('./assets/images/why-choose.webp');">
+                            <div class="auth-image-side" >
                                 <div class="auth-image-overlay">
                                     <a href="index.html" class="mb-4">
                                         <img src="assets/images/logoStackly.webp" alt="Logo"
                                             style="height: 60px; filter: brightness(0) invert(1);">
                                     </a>
-                                    <h2 class="display-5 fw-bold text-white">A Safe Space</h2>
-                                    <p class="lead text-white-50">Sign in to access your secure patient portal and therapy resources.</p>
+                                    <h2 class="display-5 fw-bold text-white">Cultivating Excellence</h2>
+                                    <p class="lead text-white-50">Sign in to manage your landscaping projects and design plans.</p>
                                 </div>
                             </div>
                         </div>
@@ -187,24 +187,24 @@
 
                             <div class="text-center  mb-2">
                                 <h2 class="fw-bold text-primary">Welcome Back!</h2>
-                                <p class="text-muted">Login to manage your appointments and wellness journey.</p>
+                                <p class="text-muted">Login to manage your landscaping projects.</p>
                             </div>
 
                             <form id="loginForm">
                                 <label class="form-label fw-bold text-muted mb-2">I am a</label>
                                 <div class="modern-role-selector mb-4">
-                                    <input type="radio" class="btn-check" name="loginRole" id="rolePatient"
-                                        value="Patient" checked autocomplete="off">
-                                    <label class="role-item" for="rolePatient">
+                                    <input type="radio" class="btn-check" name="loginRole" id="roleClient"
+                                        value="Client" checked autocomplete="off">
+                                    <label class="role-item" for="roleClient">
                                         <i class="fas fa-user"></i>
-                                        <span>Patient</span>
+                                        <span>Client</span>
                                     </label>
 
-                                    <input type="radio" class="btn-check" name="loginRole" id="roleTherapist"
-                                        value="Therapist" autocomplete="off">
-                                    <label class="role-item" for="roleTherapist">
-                                        <i class="fas fa-user-md"></i>
-                                        <span>Therapist</span>
+                                    <input type="radio" class="btn-check" name="loginRole" id="roleLandscaper"
+                                        value="Landscaper" autocomplete="off">
+                                    <label class="role-item" for="roleLandscaper">
+                                        <i class="fas fa-leaf"></i>
+                                        <span>Landscaper</span>
                                     </label>
 
                                     <input type="radio" class="btn-check" name="loginRole" id="roleAdmin" value="Admin"
@@ -246,7 +246,7 @@
                                         Password?</a>
                                 </div>
 
-                                <button class="btn thm-btn-premium w-100 mb-3 py-3 fw-bold shadow-lg">Login to Account</button>
+                                <button class="btn btn-premium w-100 mb-3 py-3 fw-bold shadow-lg">Login to Account</button>
 
                                 <p class="text-center mb-0 small text-muted">Don't have an account? <a
                                         href="signup.html" class="text-primary fw-bold text-decoration-none">Register

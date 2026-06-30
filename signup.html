@@ -41,7 +41,7 @@
         .auth-image-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(to bottom, rgba(0, 107, 86, 0.4), rgba(0, 107, 86, 0.9));
+            background: linear-gradient(to bottom, rgba(6, 27, 14, 0.4), rgba(6, 27, 14, 0.9));
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -76,8 +76,8 @@
         }
 
         .btn-check:checked+.role-item {
-            background: var(--primary);
-            border-color: var(--primary);
+            background: var(--bs-primary);
+            border-color: var(--bs-primary);
             color: white;
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 107, 86, 0.3);
@@ -88,14 +88,14 @@
         }
 
         .role-item:hover {
-            border-color: var(--primary-light);
+            border-color: var(--bs-success);
             transform: translateY(-2px);
         }
 
         /* Floating Icons Animation */
         .floating-icons .hero-shape {
             position: absolute;
-            color: var(--primary-light);
+            color: var(--bs-success);
             opacity: 0.2;
             z-index: 1;
             pointer-events: none;
@@ -122,7 +122,7 @@
 
         .auth-input-modern:focus {
             background: #ffffff !important;
-            border-color: var(--primary) !important;
+            border-color: var(--bs-primary) !important;
             box-shadow: 0 0 0 0.25rem rgba(0, 107, 86, 0.25);
         }
 
@@ -132,8 +132,8 @@
 
         /* checked */
         .form-check-input:checked {
-            background-color: var(--primary) !important;
-            border-color: var(--primary) !important;
+            background-color: var(--bs-primary) !important;
+            border-color: var(--bs-primary) !important;
         }
     </style>
 </head>
@@ -141,14 +141,14 @@
 <body class="error-page-body">
 
     <div class="floating-icons d-none d-md-block">
-        <span class="material-symbols-outlined hero-shape hero-shape-1">psychology</span>
-        <span class="material-symbols-outlined hero-shape hero-shape-2">favorite</span>
-        <span class="material-symbols-outlined hero-shape hero-shape-3">spa</span>
-        <span class="material-symbols-outlined hero-shape hero-shape-4">self_improvement</span>
+        <span class="material-symbols-outlined hero-shape hero-shape-1">eco</span>
+        <span class="material-symbols-outlined hero-shape hero-shape-2">park</span>
+        <span class="material-symbols-outlined hero-shape hero-shape-3">yard</span>
+        <span class="material-symbols-outlined hero-shape hero-shape-4">forest</span>
         <span class="material-symbols-outlined hero-shape hero-shape-5">water_drop</span>
-        <span class="material-symbols-outlined hero-shape hero-shape-6">sentiment_very_satisfied</span>
-        <span class="material-symbols-outlined hero-shape hero-shape-7">sunny</span>
-        <span class="material-symbols-outlined hero-shape hero-shape-8">groups</span>
+        <span class="material-symbols-outlined hero-shape hero-shape-6">grass</span>
+        <span class="material-symbols-outlined hero-shape hero-shape-7">potted_plant</span>
+        <span class="material-symbols-outlined hero-shape hero-shape-8">agriculture</span>
     </div>
 
     <div class="container position-relative py-3" style="z-index: 5;">
@@ -165,7 +165,7 @@
 
                             <div class="text-center mb-2">
                                 <h2 class="fw-bold text-primary">Register</h2>
-                                <p class="text-muted">Create your account to start your wellness journey.</p>
+                                <p class="text-muted">Create your account to start your landscaping project.</p>
                             </div>
 
                             <form id="signupForm">
@@ -176,18 +176,18 @@
 
                                 <label class="form-label fw-bold text-muted mb-2">I am a</label>
                                 <div class="modern-role-selector mb-4">
-                                    <input type="radio" class="btn-check" name="role" id="regPatient" value="Patient"
+                                    <input type="radio" class="btn-check" name="role" id="regClient" value="Client"
                                         checked autocomplete="off">
-                                    <label class="role-item" for="regPatient">
+                                    <label class="role-item" for="regClient">
                                         <i class="fas fa-user"></i>
-                                        <span>Patient</span>
+                                        <span>Client</span>
                                     </label>
 
-                                    <input type="radio" class="btn-check" name="role" id="regTherapist" value="Therapist"
+                                    <input type="radio" class="btn-check" name="role" id="regLandscaper" value="Landscaper"
                                         autocomplete="off">
-                                    <label class="role-item" for="regTherapist">
-                                        <i class="fas fa-user-md"></i>
-                                        <span>Therapist</span>
+                                    <label class="role-item" for="regLandscaper">
+                                        <i class="fas fa-leaf"></i>
+                                        <span>Landscaper</span>
                                     </label>
 
                                     <input type="radio" class="btn-check" name="role" id="regAdmin" value="Admin"
@@ -237,7 +237,7 @@
                                     </label>
                                 </div>
 
-                                <button class="btn thm-btn-premium w-100 mb-3 py-3 fw-bold shadow-lg">Register Account</button>
+                                <button class="btn btn-premium w-100 mb-3 py-3 fw-bold shadow-lg">Register Account</button>
 
                                 <p class="text-center mb-0 small text-muted">Already have an account? <a
                                         href="login.html" class="text-primary fw-bold text-decoration-none">Login
@@ -247,14 +247,14 @@
 
                         <!-- Right: Image Side -->
                         <div class="col-lg-6 d-none d-lg-block">
-                            <div class="auth-image-side" style="background-image: url('./assets/images/blog-2.webp');">
+                            <div class="auth-image-side" style="background-image: url('assets/images/hero3.png');">
                                 <div class="auth-image-overlay">
                                     <a href="index.html" class="mb-4">
                                         <img src="assets/images/logoStackly.webp" alt="Logo"
                                             style="height: 60px; filter: brightness(0) invert(1);">
                                     </a>
-                                    <h2 class="display-5 fw-bold text-white">Find Your Balance</h2>
-                                    <p class="lead text-white-50">Join our clinic and take the first step toward a healthier, more balanced mind.</p>
+                                    <h2 class="display-5 fw-bold text-white">Cultivating Excellence</h2>
+                                    <p class="lead text-white-50">Sign up to begin designing your dream outdoor space.</p>
                                 </div>
                             </div>
                         </div>
