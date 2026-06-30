@@ -24,14 +24,36 @@
     <!-- Common Header Placeholder -->
     <div id="common-header"></div>
 
-    <main class="pt-5 mt-5 pb-5 overflow-hidden">
+    <!-- Narrative Header (Premium Full Background) -->
+    <header class="position-relative d-flex align-items-center justify-content-center text-center overflow-hidden" style="min-height: 100vh; padding-top: 100px;">
+        <div class="position-absolute w-100 h-100 top-0 start-0 bg-cover bg-center" style="background-image: url('assets/images/hero_organic_garden.webp'); background-attachment: fixed; filter: brightness(0.9);"></div>
+        <div class="position-absolute w-100 h-100 top-0 start-0" style="background: linear-gradient(to top, rgba(22, 44, 31, 1) 0%, rgba(22, 44, 31, 0.6) 50%, rgba(22, 44, 31, 0.2) 100%);"></div>
+        
+        <div class="position-relative z-1 container-xl px-4 px-md-5 text-white d-flex flex-column align-items-center" data-aos="fade-up">
+            <div class="glass-panel d-inline-flex align-items-center gap-2 px-4 py-2 rounded-pill mb-4 border border-white border-opacity-25 shadow-lg" style="background: rgba(255, 255, 255, 0.1);">
+                <span class="material-symbols-outlined text-white fs-5">menu_book</span>
+                <span class="text-white fw-bold tracking-widest text-uppercase small" style="font-size: 0.8rem;">The Verdant Journal</span>
+            </div>
+            
+            <h1 class="display-2 fw-bold mb-4 text-white mx-auto" style="line-height: 1.1; max-width: 900px;">
+                Expert Insights &<br>
+                <span class="text-success" style="text-shadow: 0 4px 20px rgba(0,0,0,0.3);">Seasonal Tips.</span>
+            </h1>
+            
+            <p class="lead text-white opacity-75 mb-5 fw-light mx-auto" style="font-size: 1.35rem; max-width: 750px;">
+                Read our latest articles on organic gardening, hardscape design, and sustainable outdoor living.
+            </p>
+        </div>
+    </header>
+
+    <main class="pb-5 overflow-hidden">
         <div class="container-xl px-4 px-md-5 overflow-hidden">
             
             <!-- Section 1: Featured Article -->
             <section class="mb-5 pt-4 overflow-hidden" data-aos="fade-up">
                 <div class="bg-white rounded-4 overflow-hidden soft-bloom border-gradient-hover group cursor-pointer d-flex flex-column flex-md-row" style="min-height: 500px;">
                     <div class="col-md-6 position-relative overflow-hidden" style="min-height: 300px;">
-                        <img class="position-absolute w-100 h-100 top-0 start-0 object-fit-cover transition-all duration-700 group-hover-scale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOscBxu_Vb_QFEpNGEVFpBRyoEcVunNHygOz3eywfcwRdqxwLms8TBNsreP5vbgpDPeb4f64Y_oJGiYW8MUbG3zxL_avTK-NK90wH86rmuSFOSWlysP825S3xEPPr6WJuS1b5MZ1cs4llp-NjGJvVt46SsWNNA_pNhnILzR9qud5-92wwYN_1nI3NMZOH6-jU_fMqhuHqFdGxyH1Zeftaq669R2bgEuYV_0iRXiz8Sc2dxrZkP5DpQ8W4YxwPhWywj6H7NG9VUP0s" alt="Featured Post" />
+                        <img class="position-absolute w-100 h-100 top-0 start-0 object-fit-cover transition-all duration-700 group-hover-scale" src="assets/images/img_local_9.webp" alt="Featured Post" />
                         <div class="position-absolute top-0 start-0 p-4">
                             <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-3 py-2 rounded-pill tracking-widest text-uppercase shadow-sm bg-white">FEATURED</span>
                         </div>
@@ -47,7 +69,7 @@
                             Discover the professional secrets to awakening your landscape after winter. From soil revitalization to the first precision prune of the season.
                         </p>
                         <div class="d-flex align-items-center gap-3 pt-3 border-top border-light">
-                            <img class="rounded-circle object-fit-cover border shadow-sm" style="width: 45px; height: 45px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaPZyGxfwGfDvoWDJwjhA4poaawIU8WcWyzQxSKOGZWvwYaAxRm6ls7wjbfIldLS4gz-WCx5KbfugWbIskICCzpyUPWNOJwj2g1IH0jy3uUD6jy7DxbX7Ow6wimNwoww6xBDJDzGuw6f3QD6a6f49I9Fl6yy-d360V6bAw4Ptf-QrW99LwzPiFOC-ESwSUnsY6WvCj8SPYayRi_YAR9y93Zgl81eosCKNrm25fdVjNcW8vUAjJjXB6unSEorMFeuwoeQ-902Zdz3E" alt="Elena" />
+                            <img class="rounded-circle object-fit-cover border shadow-sm" style="width: 45px; height: 45px;" src="assets/images/img_local_10.webp" alt="Elena" />
                             <div>
                                 <span class="d-block fw-bold text-primary">Elena Vance</span>
                                 <span class="d-block small text-secondary">Head of Horticulture</span>
@@ -73,7 +95,7 @@
                             <div class="col-md-6" data-aos="fade-up">
                                 <article class="bg-white rounded-4 overflow-hidden soft-bloom h-100 group cursor-pointer border-gradient-hover">
                                     <div class="position-relative overflow-hidden" style="height: 220px;">
-                                        <img class="w-100 h-100 object-fit-cover transition-all duration-500 group-hover-scale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApCsUNAnntiBj2nK7U6cPk_ZnBye-7QahpQoER0gNBDC45xlq9AKTp2vZ5bi-DFrzte5DSTk2NrAnciL08OVcupE-xV7AysbNzkIt8Zmk4acOa8gNNncWmebxaJrg-vdOKfs8blb0VR-uh5vBw5Fl29OfppUntGkoR1p4GIjH5tCuVSrGzP441dJ3ezN6EDS4g9pOhN-BVExTzTF7DSTQYBqCmQANiGJSCUNJHQjkhqCXFISpmYQ8uWXDvKw8-OX1aQCc0ZSLdgJc" alt="Hardscape" />
+                                        <img class="w-100 h-100 object-fit-cover transition-all duration-500 group-hover-scale" src="assets/images/img_local_11.webp" alt="Hardscape" />
                                         <span class="badge bg-success position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill tracking-widest text-uppercase">Hardscape</span>
                                     </div>
                                     <div class="p-4 d-flex flex-column h-100">
@@ -91,7 +113,7 @@
                             <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
                                 <article class="bg-white rounded-4 overflow-hidden soft-bloom h-100 group cursor-pointer border-gradient-hover">
                                     <div class="position-relative overflow-hidden" style="height: 220px;">
-                                        <img class="w-100 h-100 object-fit-cover transition-all duration-500 group-hover-scale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO5fbxm_PGdq9ojLLR5XWhScPW390Ad5PcTx1APnyzU90SE0EUsmtKajjeiMPtmHko0-oelcFxcdGOersKew0jYd08YrOk8kMaGiqis_0RwBqWpFCzW0mraH5v7gtU1kxA0gD5_Svy448sNSm30lFv_8ui_0aFwvbaMtaesGkz_pmdycpJRg8r3SoWq5GhewTQLE_XcuFAr-IhiMy9M5aPr1Ee7duOpdDV402IYS4vxIg17qBXqHxxkh6QTTrNFNRPT70AlIP4Rt8" alt="Maintenance" />
+                                        <img class="w-100 h-100 object-fit-cover transition-all duration-500 group-hover-scale" src="assets/images/img_local_12.webp" alt="Maintenance" />
                                         <span class="badge bg-success position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill tracking-widest text-uppercase">Maintenance</span>
                                     </div>
                                     <div class="p-4 d-flex flex-column h-100">
@@ -109,7 +131,7 @@
                             <div class="col-md-6" data-aos="fade-up">
                                 <article class="bg-white rounded-4 overflow-hidden soft-bloom h-100 group cursor-pointer border-gradient-hover">
                                     <div class="position-relative overflow-hidden" style="height: 220px;">
-                                        <img class="w-100 h-100 object-fit-cover transition-all duration-500 group-hover-scale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSYCacMs8GS2Nb3-ho2L1kQdPDx8J2LGiewEVIHj0VKN8n_Zf5x9jMdC1eagiQUyat4HZu4bzXDJeXg2_WPSikFPOVov_7_bvCmBqzyW9T5cY4QQK9QoD885wjDwK1llgMP7fCkgJMw_C5d5FLp5OEx2dpRhWoa3kqjy2-ZDgVcdIF-_hfuefd2rPnWmwh7il6VX6OPHRopLXSxX8_tE10YAHxkO1hBhBfk1mrYPBjWhpFbRmgvvbRwlvPPVJiiFU_VH1k61HDKvo" alt="Ecology" />
+                                        <img class="w-100 h-100 object-fit-cover transition-all duration-500 group-hover-scale" src="assets/images/img_local_13.webp" alt="Ecology" />
                                         <span class="badge bg-success position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill tracking-widest text-uppercase">Ecology</span>
                                     </div>
                                     <div class="p-4 d-flex flex-column h-100">
@@ -127,7 +149,7 @@
                             <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
                                 <article class="bg-white rounded-4 overflow-hidden soft-bloom h-100 group cursor-pointer border-gradient-hover">
                                     <div class="position-relative overflow-hidden" style="height: 220px;">
-                                        <img class="w-100 h-100 object-fit-cover transition-all duration-500 group-hover-scale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV5w9Ydt8-O461RGZRZYiBtXr2uVBy_uJZaFEUQpDbPuHoPlnAryQ5bw6516iMPwupBEg7scZNqPwzL4pn8rkNfYeb7r4O0PYy8fRwxw9Qf2Ajij1qXnJC4ER50pxWF_Alfo2LwHl_1IPQDs89s1k3Thh7_Y7SX8kuTsLgRosgC89-c-FaRUpCdGisREeAfi9plYTZ2NwPGDiOSUARy54FfGxUzKvQ5nON2pq7OKBNHrJw_sfTcJtfuFHn1BC-il8EzmdYaap87-I" alt="Design" />
+                                        <img class="w-100 h-100 object-fit-cover transition-all duration-500 group-hover-scale" src="assets/images/img_local_14.webp" alt="Design" />
                                         <span class="badge bg-success position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill tracking-widest text-uppercase">Design</span>
                                     </div>
                                     <div class="p-4 d-flex flex-column h-100">
@@ -228,7 +250,7 @@
 
                     <!-- Section 5: Author Spotlight -->
                     <div class="bg-white p-4 rounded-4 soft-bloom text-center border border-success border-opacity-10" data-aos="fade-left" data-aos-delay="200">
-                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPGExVw4XnaqrHrFgCUmSUD-gGs6A7PRbc4M5MXbBNIN5MASzOpg-rcfBtgH_Svbq8c9Jjwjw_8l7AATrz7Q8-PUqZn5wpc5JviYqsU9KaR9GFEnnWvY9iHLv3qEuvsOlB1_z6CUCBGRoZl0f8IZ9zP3Vz64lKTP3GF-inoBn2LKk0z3YTv5ECidTd2qxzCbcAuExb5978w3wOuUcuaUTUcX3D_tXDKppXge9IhGwJ9f3O4Kc4kwDaxwY6Jfml5RiUXpUtUbXst80" class="rounded-circle object-fit-cover mx-auto mb-3 border border-3 border-light shadow-sm hover-scale" style="width: 100px; height: 100px;" alt="Author" />
+                        <img src="assets/images/img_local_15.webp" class="rounded-circle object-fit-cover mx-auto mb-3 border border-3 border-light shadow-sm hover-scale" style="width: 100px; height: 100px;" alt="Author" />
                         <h3 class="h5 fw-bold text-primary mb-1">Marcus Thorne</h3>
                         <p class="small text-success fw-bold mb-3">Founder & Lead Designer</p>
                         <p class="small text-secondary fst-italic mb-3">"A garden is a long conversation between nature and the human spirit. I'm here to translate that dialogue."</p>

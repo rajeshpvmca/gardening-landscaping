@@ -84,7 +84,29 @@
     <!-- Common Header Placeholder -->
     <div id="common-header"></div>
 
-    <main class="pt-5 mt-5 overflow-hidden">
+    <!-- Narrative Header (Premium Full Background) -->
+    <header class="position-relative d-flex align-items-center justify-content-center text-center overflow-hidden" style="min-height: 100vh; padding-top: 100px;">
+        <div class="position-absolute w-100 h-100 top-0 start-0 bg-cover bg-center" style="background-image: url('assets/images/hero3.webp'); background-attachment: fixed; filter: brightness(0.9);"></div>
+        <div class="position-absolute w-100 h-100 top-0 start-0" style="background: linear-gradient(to top, rgba(22, 44, 31, 1) 0%, rgba(22, 44, 31, 0.6) 50%, rgba(22, 44, 31, 0.2) 100%);"></div>
+        
+        <div class="position-relative z-1 container-xl px-4 px-md-5 text-white d-flex flex-column align-items-center" data-aos="fade-up">
+            <div class="glass-panel d-inline-flex align-items-center gap-2 px-4 py-2 rounded-pill mb-4 border border-white border-opacity-25 shadow-lg" style="background: rgba(255, 255, 255, 0.1);">
+                <span class="material-symbols-outlined text-white fs-5">photo_library</span>
+                <span class="text-white fw-bold tracking-widest text-uppercase small" style="font-size: 0.8rem;">Our Portfolio</span>
+            </div>
+            
+            <h1 class="display-2 fw-bold mb-4 text-white mx-auto" style="line-height: 1.1; max-width: 900px;">
+                A Gallery of Living<br>
+                <span class="text-success" style="text-shadow: 0 4px 20px rgba(0,0,0,0.3);">Masterpieces.</span>
+            </h1>
+            
+            <p class="lead text-white opacity-75 mb-5 fw-light mx-auto" style="font-size: 1.35rem; max-width: 750px;">
+                Explore our award-winning landscape designs and hardscape builds that seamlessly blend human habitat with the natural world.
+            </p>
+        </div>
+    </header>
+
+    <main class="overflow-hidden">
         <!-- Hero & Filter Section -->
         <section class="py-5 px-4 px-md-5 overflow-hidden">
             <div class="container-xl" data-aos="fade-up">
@@ -110,7 +132,7 @@
                 <div class="portfolio-masonry" data-aos="fade-up" data-aos-delay="100">
                     <div class="portfolio-item">
                         <div class="position-relative overflow-hidden rounded-4 soft-bloom border-gradient-hover group">
-                            <img class="w-100 h-auto object-fit-cover hover-scale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl7RwjOj_xpECGk3hsndALrWJ9QeQcYHZywLsT5MnsahVnQtuzyF9PY1lW0nWMVfP806PJLPuL2rsep7Smvx9bsMa-M0pn7TW_wIC7ZZfarVqqmKvOdkimToSLU6oR67ThleISNvKrEdTLBzKIgxkl6gz7ynXa0yk-B8KkBCpltt5ylcn4_uuhisNJqCgZZOKqv_JtVQAVl6z9D3wQS6I1EA0yXGBzlr2YNKUwuyZPzEJPignJ5-YqJLhSTa1h3JS6HRJ7bgYkYbY" alt="Modern" />
+                            <img class="w-100 h-auto object-fit-cover hover-scale" src="assets/images/img_local_28.webp" alt="Modern" />
                             <div class="position-absolute bottom-0 start-0 w-100 p-4 opacity-0 group-hover-opacity-100 transition-opacity" style="background: linear-gradient(to top, rgba(22,44,31,0.9), transparent);">
                                 <span class="badge bg-success bg-opacity-25 text-success border border-success border-opacity-50 text-uppercase tracking-widest mb-2">Modern</span>
                                 <h3 class="h5 fw-bold text-white mb-0">The Glass House Terrace</h3>
@@ -120,7 +142,7 @@
                     
                     <div class="portfolio-item">
                         <div class="position-relative overflow-hidden rounded-4 soft-bloom border-gradient-hover group">
-                            <img class="w-100 h-auto object-fit-cover hover-scale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmRfNPQ9_3UjPq1s45u07uuyKTRMNq4H1dv54xlt2lltYKB7D-4WOkcFCOcXMiH8XbbtPbrdwFOmjDRCcjgOLe5pNAr8zi8zfWLdJRUG3unu28rNcTOl_S2P9LF2cgeSJf3kguHbkhOM7EtHk6fbHqFB3xFq89Vu99IJQcCKfFdWMprWYv_ZqgU1_Ax1Q0cvLMHm5qXDJsq93K92DAdsSWLRWy6u28449peQpGUMCDsPYRwvx7jt-5PWxT2YY4C9HDkyjqTdYovig" alt="English" />
+                            <img class="w-100 h-auto object-fit-cover hover-scale" src="assets/images/img_local_29.webp" alt="English" />
                             <div class="position-absolute bottom-0 start-0 w-100 p-4 opacity-0 group-hover-opacity-100 transition-opacity" style="background: linear-gradient(to top, rgba(22,44,31,0.9), transparent);">
                                 <span class="badge bg-success bg-opacity-25 text-success border border-success border-opacity-50 text-uppercase tracking-widest mb-2">English</span>
                                 <h3 class="h5 fw-bold text-white mb-0">Surrey Willow Estate</h3>
@@ -130,7 +152,7 @@
                     
                     <div class="portfolio-item">
                         <div class="position-relative overflow-hidden rounded-4 soft-bloom border-gradient-hover group">
-                            <img class="w-100 h-auto object-fit-cover hover-scale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeldvf_RaVhvKfpyIZB2pIeRHC9vZYj4pppMlGXLe2un-wE4O61kYm6por9fmAGdQnxNg0YXH8gd1BU_OT46UVMb5SgCCjl-8rI2zTcw8n55PTtAvooL0XlsrXba6EspghbllwF8IM_QVMEJBgAG5OXibub-vQSrVJeRQrgF1gnkPG7Me38Cfk-NpJqvEjmS9aVqnic8BI0ZYP5l3gJviJH0wka4m3k_4h2FmQwV82gPLEYG66I0UCzhOxWuXly2QKJU-M40FcESo" alt="Zen" />
+                            <img class="w-100 h-auto object-fit-cover hover-scale" src="assets/images/img_local_30.webp" alt="Zen" />
                             <div class="position-absolute bottom-0 start-0 w-100 p-4 opacity-0 group-hover-opacity-100 transition-opacity" style="background: linear-gradient(to top, rgba(22,44,31,0.9), transparent);">
                                 <span class="badge bg-success bg-opacity-25 text-success border border-success border-opacity-50 text-uppercase tracking-widest mb-2">Zen</span>
                                 <h3 class="h5 fw-bold text-white mb-0">The Kyoto Retreat</h3>
@@ -140,7 +162,7 @@
                     
                     <div class="portfolio-item">
                         <div class="position-relative overflow-hidden rounded-4 soft-bloom border-gradient-hover group">
-                            <img class="w-100 h-auto object-fit-cover hover-scale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCprc0ZhzYhQJJjdPz5WEkdvjX-fSC2XzO1-YbUgJ37OtNdLPxAEr2fKTGTwSt3Mx-Nc7rJomt18Lfluu1IEoo-CrojxFIpUXNUacKObCTnRuCiwVE5Uaf209g_DMoAPvytazYZt2Lc4q7zOJ9F4vDx3xfrQlLFyFPzhahNmLGeV90oulSpZ8GlzZiPMQu6N3TbymZfxnjUFV43F0I9XmjvD8yQFDHTDwZbM0OxQfSgyf7zFyQ53QD6a1PYgJtak901m45eAhkInfs" alt="Commercial" />
+                            <img class="w-100 h-auto object-fit-cover hover-scale" src="assets/images/img_local_31.webp" alt="Commercial" />
                             <div class="position-absolute bottom-0 start-0 w-100 p-4 opacity-0 group-hover-opacity-100 transition-opacity" style="background: linear-gradient(to top, rgba(22,44,31,0.9), transparent);">
                                 <span class="badge bg-success bg-opacity-25 text-success border border-success border-opacity-50 text-uppercase tracking-widest mb-2">Commercial</span>
                                 <h3 class="h5 fw-bold text-white mb-0">Nexa Hub Courtyard</h3>
@@ -150,7 +172,7 @@
 
                     <div class="portfolio-item">
                         <div class="position-relative overflow-hidden rounded-4 soft-bloom border-gradient-hover group">
-                            <img class="w-100 h-auto object-fit-cover hover-scale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHHow6PDQk4j44H2KUcENeKOSOEjY2BXY-nFZLANxzEsQaoWxnmFgbqCOFUR6mYRy4OI91PSJg0OCt9Lj8hkwA-KADWxtEm3gWgcl2ZWbEYbQ2z_uPTL10WfDbIJDgo18j1pNNOmeuBgwfXUIQ3H-tCxrspgeYM8XzvRGFZtUf_DFaajrsjsQx2bidCebrVE8qmUGFFTP9Jp-QztBIcTtzBZ62M8OjPH-BkYXErfIn1YKBFeJT7E6ux9t9row5oqqjU4LW06o2RNE" alt="Modern Social" />
+                            <img class="w-100 h-auto object-fit-cover hover-scale" src="assets/images/img_local_32.webp" alt="Modern Social" />
                             <div class="position-absolute bottom-0 start-0 w-100 p-4 opacity-0 group-hover-opacity-100 transition-opacity" style="background: linear-gradient(to top, rgba(22,44,31,0.9), transparent);">
                                 <span class="badge bg-success bg-opacity-25 text-success border border-success border-opacity-50 text-uppercase tracking-widest mb-2">Modern</span>
                                 <h3 class="h5 fw-bold text-white mb-0">Azure Ridge Social</h3>
@@ -160,7 +182,7 @@
 
                     <div class="portfolio-item">
                         <div class="position-relative overflow-hidden rounded-4 soft-bloom border-gradient-hover group">
-                            <img class="w-100 h-auto object-fit-cover hover-scale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsqoV9LspArLn_A12CBXfYgFFWnFu4NXRuqqRh5y7TTeSu4ojLHR7oPoDQ9Zc4MiofBCXdKCYslsD3IlZPa5igO1-cmNflgbP7k4GI96gjbl8RU6CVsrteQ7P06kD6lpC3VuR5PDfmHV09LslZuN52JIBFsl3BgMJzjlqsxJ6pEGMrjY2h67IazsQYuUw0sfCupg6VEWOtAIZak34thghFHtx8Yuznn79diELroTKsZd4kkw9cuHzc5juDwP6B229lj4SSweylo1g" alt="Special Feature" />
+                            <img class="w-100 h-auto object-fit-cover hover-scale" src="assets/images/img_local_33.webp" alt="Special Feature" />
                             <div class="position-absolute bottom-0 start-0 w-100 p-4 opacity-0 group-hover-opacity-100 transition-opacity" style="background: linear-gradient(to top, rgba(22,44,31,0.9), transparent);">
                                 <span class="badge bg-success bg-opacity-25 text-success border border-success border-opacity-50 text-uppercase tracking-widest mb-2">Special Feature</span>
                                 <h3 class="h5 fw-bold text-white mb-0">Cascade Falls Residence</h3>
@@ -194,11 +216,11 @@
                     <div class="col-lg-7" data-aos="fade-left">
                         <div class="before-after-container shadow-lg border border-4 border-white" id="sliderContainer">
                             <!-- After Image -->
-                            <img class="before-after-slider" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAv0XRRuxlxpapw0d5T4OjQySyGQO9iCdT-3PbKmZKrXe9iC530l64PA1uyYIFsU30Ul7bKvmVwOnI02pFHiYtwBW3G_fSOqvmVX6D6Zv0539lSgLV2rJEmH-Abm9BFKitQa91SYU36vq1ydmEaGwQtUbx50s1W5fvstgV-kJz3v8z2L6r7efLg4OGBlc6eQWmLJJ_ngfcg8Sz7YWS8HgJ7Rym0zO9SQxLRH7PUaY_LE95vNBFxEQVpZwBhZ73ZbKsMPlW9QtbFOf0" alt="After" />
+                            <img class="before-after-slider" src="assets/images/img_local_34.webp" alt="After" />
                             
                             <!-- Before Image (Clipped) -->
                             <div class="position-absolute h-100 top-0 start-0 overflow-hidden border-end border-2 border-white" style="width: 50%;" id="beforeClip">
-                                <img class="before-after-slider" style="width: 200%; max-width: none;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLwr9X-YkzUMzbykOChybEzCm0uk6m5Dligk4XeSefUcwb2lkuNecsqCRrOyCcNhThwTZ6muuyvL68ys1M4nvAnZbvmkt_sProUq32fSebfkJKG_DZ9YK3_Rvn0vloXkqLTR-VdXFHbZT0XL4Bpl8e8m8l5f163tlnwgyZ6jDE0NatFriNn16pkWtFudbOgTPP-Lc8t3U702IrJ9Fcj9dfZT_qi3pFQibGLmlIaTOLk4DJnv5iwcxpqDmQgdk0ngUODe-VBGWzJIk" alt="Before" />
+                                <img class="before-after-slider" style="width: 200%; max-width: none;" src="assets/images/img_local_35.webp" alt="Before" />
                             </div>
                             
                             <!-- Slider Handle -->
@@ -214,7 +236,7 @@
             <div class="container-xl px-4 px-md-5">
                 <div class="bg-dark rounded-4 overflow-hidden d-flex flex-column flex-lg-row text-white shadow-lg border-gradient-hover" data-aos="fade-up">
                     <div class="col-lg-6">
-                        <img class="w-100 h-100 object-fit-cover" style="min-height: 400px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcUyJvSOS0raatz8_8e-N0pIGBxL1Lq2wy2xk3Vs5ElFdl7DpfmS_9W8o8Q3SkWzq21TMZgTELVd2DknKNvGV17QTsp4z36Zk-QR8AlkN7rIiDYhD-rGKLPhq4dTcnMeacO7YE5vVNNVcuaSFSyO3hOArjNT7ppu8qfbqJPcbkONAVo4wNP521vCFsk5r9291UoiLcj_BhFi5wYd86dPh59NeN0vrsB2TK-kMQmVb5BK3V5KtrW-jerhZwXwKmRN73iJXl_8Bw-3c" alt="Wilson Estate" />
+                        <img class="w-100 h-100 object-fit-cover" style="min-height: 400px;" src="assets/images/img_local_36.webp" alt="Wilson Estate" />
                     </div>
                     <div class="col-lg-6 p-4 p-md-5 d-flex flex-column justify-content-center bg-dark">
                         <div>
@@ -295,7 +317,7 @@
                             <span class="material-symbols-outlined position-absolute text-success opacity-25" style="font-size: 5rem; top: 1rem; right: 1rem;">format_quote</span>
                             <p class="fs-5 fst-italic mb-4 position-relative z-1 text-secondary">"Stackly Nature transformed our unusable hillside into a series of beautiful terraced gardens. It's now the centerpiece of our home. Their attention to detail on the stonework was truly world-class."</p>
                             <div class="d-flex align-items-center gap-3">
-                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBf9lyXgo1gfElAD8W5aGnShxey9KEA9ScUI4xTsb3qbmKrcjqtqbbVGKG67IsB6SAEOx3njcZpnUOzCO15ihnM2CuGe5YYeqz0D2Wf8y_20ll2ktVcva5Wm2bEbeOsUI95brr_rL3YYZExrP6_pynbwKaSh_1-7Hr_J_m8d7UstGLRFdJHkXMaLqJ1qI465I6QNF28gIIl18c94a0q7l-twj4g79_z-LzMahNXeN7fUIK1DsFJIJaN6_QJBgsgt_ZHZPlvWPdWifc" class="rounded-circle object-fit-cover shadow-sm" style="width: 60px; height: 60px;" alt="Sarah" />
+                                <img src="assets/images/img_local_37.webp" class="rounded-circle object-fit-cover shadow-sm" style="width: 60px; height: 60px;" alt="Sarah" />
                                 <div>
                                     <h6 class="fw-bold mb-0 text-primary">Sarah Jennings</h6>
                                     <small class="text-secondary">Oakley Project Client</small>
@@ -307,7 +329,7 @@
                             <span class="material-symbols-outlined position-absolute text-success opacity-25" style="font-size: 5rem; top: 1rem; right: 1rem;">format_quote</span>
                             <p class="fs-5 fst-italic mb-4 position-relative z-1 text-secondary">"Working with them was a seamless experience. They understood our need for a low-maintenance but visually striking corporate space. The Nexa Hub project exceeded all our expectations."</p>
                             <div class="d-flex align-items-center gap-3">
-                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz7h5jW0JSHUryY-yrRSvSbcmnoWh_jOED53dJS7LV1d8_uItCdISmyspxPSv27uJtnVd14XX4XSho7-uKFVATcEHNzIxdw6I19mFc6oAmcdLxIftIG9bAG1Vn9WJzMn65yQdcpuyjR2_aHWAXTYyfJiFm92P6rsnIMUgETvRet75zTP7yYHWPaPT3RcTysls9ziJra-IqZyay1ww5q8OOSbVRoQtZF0MAuk2sWDH3E_MiN_rAf_Mz99dGtLqRLSS9XqLHNEB3qMo" class="rounded-circle object-fit-cover shadow-sm" style="width: 60px; height: 60px;" alt="Marcus" />
+                                <img src="assets/images/img_local_38.webp" class="rounded-circle object-fit-cover shadow-sm" style="width: 60px; height: 60px;" alt="Marcus" />
                                 <div>
                                     <h6 class="fw-bold mb-0 text-primary">Marcus Thorne</h6>
                                     <small class="text-secondary">Operations Director, Nexa Hub</small>
@@ -350,7 +372,7 @@
         <section class="pb-5 pb-lg-6 px-4 px-md-5 overflow-hidden">
             <div class="container-xl" data-aos="fade-up">
                 <div class="position-relative rounded-4 overflow-hidden text-center py-6">
-                    <img class="position-absolute w-100 h-100 top-0 start-0 object-fit-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB45dYL2LO-2wCGFRKM-nl1oKZKtkobGq3wHDidOosEPka9UHhp44ezID9IlZnHeoluyfvOdCb7xhlWmc4zcEcHydWVvplTxQyQVQ_LT5hHObbKlIOs_bwi_fuMTAfWSSe7EPPsyCJJmhlLuYsAuVmAi8mPdxJkQgI0OMskBgJ3xhZvwif01sHvvtvk_t9sK3IxT85B1RVdUC23Zo28RY3eTyxWz_23cZM2W7S0EloYOyGJmxN21-ktip7kKf4ObP2-HXYfP1WJzDo" alt="Call to Action" />
+                    <img class="position-absolute w-100 h-100 top-0 start-0 object-fit-cover" src="assets/images/img_local_39.webp" alt="Call to Action" />
                     <div class="position-absolute w-100 h-100 top-0 start-0 bg-dark opacity-75 backdrop-blur-sm"></div>
                     
                     <div class="position-relative z-1 px-4 py-5">
