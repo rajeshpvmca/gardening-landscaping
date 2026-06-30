@@ -1,3 +1,4 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
 
 /* --- 1. Custom Variables & Theme Overrides --- */
 :root {
@@ -459,5 +460,29 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .display-4, .display-5 {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(138, 207, 10, 0.1);
+}
+
+/* --- Footer Social Icons --- */
+.social-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.social-icon-btn:hover {
+  background: var(--bs-success);
+  color: white;
+  border-color: var(--bs-success);
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 20px rgba(76, 175, 80, 0.4);
 }
