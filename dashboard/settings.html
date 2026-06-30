@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body { background-color: #f8f9fa; padding: 1rem 2rem; font-family: var(--font-body, 'Outfit', sans-serif); }
+        .dash-card { background: #fff; border: 1px solid rgba(0,0,0,0.05); border-radius: 1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.02); padding: 2rem; margin-bottom: 1.5rem; }
+        
+        .toggle-row { 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            gap: 1rem;
+        }
+        .toggle-row:last-child { border-bottom: none; padding-bottom: 0; }
+        .toggle-label h5 { font-size: 1rem; font-weight: 600; color: #212529; margin: 0 0 4px; }
+        .toggle-label p  { font-size: 0.85rem; color: #6c757d; margin: 0; }
+        
+        .form-check-input {
+            width: 3em;
+            height: 1.5em;
+            cursor: pointer;
+        }
+        .form-check-input:checked {
+            background-color: var(--bs-success);
+            border-color: var(--bs-success);
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <h2 class="fw-bold text-primary mb-2">Settings</h2>
+        <p class="text-secondary mb-4">Manage your account preferences and notifications.</p>
+
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="dash-card">
+                    <h5 class="fw-bold mb-4 text-primary d-flex align-items-center gap-2"><span class="material-symbols-outlined">notifications</span> Notifications</h5>
+                    
+                    <div class="toggle-row pt-0">
+                        <div class="toggle-label">
+                            <h5>Maintenance Reminders</h5>
+                            <p>Receive email reminders 24 hours before a scheduled visit.</p>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" checked>
+                        </div>
+                    </div>
+                    
+                    <div class="toggle-row">
+                        <div class="toggle-label">
+                            <h5>Invoice Alerts</h5>
+                            <p>Get notified when a new invoice is generated or due.</p>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" checked>
+                        </div>
+                    </div>
+                    
+                    <div class="toggle-row">
+                        <div class="toggle-label">
+                            <h5>Seasonal Newsletter</h5>
+                            <p>Receive our quarterly gardening tips and landscaping trends.</p>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dash-card">
+                    <h5 class="fw-bold mb-4 text-primary d-flex align-items-center gap-2"><span class="material-symbols-outlined">security</span> Privacy & Security</h5>
+                    
+                    <div class="toggle-row pt-0">
+                        <div class="toggle-label">
+                            <h5>Two-Factor Authentication</h5>
+                            <p>Add an extra layer of security to your client portal.</p>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch">
+                        </div>
+                    </div>
+                    
+                    <div class="toggle-row">
+                        <div class="toggle-label">
+                            <h5>Share Property Photos</h5>
+                            <p>Allow Stackly to feature your completed landscape on our public portfolio.</p>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="dash-card border-danger border-opacity-25 bg-danger bg-opacity-10">
+                    <h5 class="fw-bold mb-3 text-danger d-flex align-items-center gap-2"><span class="material-symbols-outlined">warning</span> Danger Zone</h5>
+                    <p class="small text-danger opacity-75 mb-4">These actions are irreversible. Please proceed with caution.</p>
+                    
+                    <div class="d-flex flex-column gap-3">
+                        <button class="btn btn-outline-danger fw-bold d-flex align-items-center justify-content-center gap-2">
+                            <span class="material-symbols-outlined" style="font-size: 1.1rem;">block</span> Deactivate Account
+                        </button>
+                        <button class="btn btn-danger fw-bold d-flex align-items-center justify-content-center gap-2">
+                            <span class="material-symbols-outlined" style="font-size: 1.1rem;">delete_forever</span> Delete Account
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('button, a.btn, .action-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.top.location.href = '../404.html';
+            });
+        });
+    });
+</script>
+</body>
+</html>

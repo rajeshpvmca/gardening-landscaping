@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Overview</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body { background-color: #f8f9fa; padding: 1rem 2rem; }
+        .dash-card { background: #fff; border: 1px solid rgba(0,0,0,0.05); border-radius: 1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.02); padding: 1.5rem; height: 100%; transition: transform 0.2s; }
+        .dash-card:hover { transform: translateY(-3px); }
+        .icon-box { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; }
+        .chart-placeholder { height: 250px; background: rgba(0,0,0,0.02); border-radius: 10px; display: flex; align-items: center; justify-content: center; border: 2px dashed rgba(0,0,0,0.05); }
+    </style>
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="fw-bold text-primary mb-0">Command Center</h2>
+            <button class="btn btn-premium rounded-pill px-4 fw-bold"><span class="material-symbols-outlined align-middle me-2">download</span> Export Data</button>
+        </div>
+        
+        <div class="row g-4 mb-4">
+            <div class="col-md-3">
+                <div class="dash-card">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div>
+                            <p class="text-secondary small fw-bold text-uppercase mb-1">Total Revenue</p>
+                            <h3 class="fw-bold text-dark mb-0">$124.5K</h3>
+                        </div>
+                        <div class="icon-box bg-success bg-opacity-10 text-success">
+                            <span class="material-symbols-outlined">payments</span>
+                        </div>
+                    </div>
+                    <p class="small text-success fw-bold mb-0"><span class="material-symbols-outlined align-middle" style="font-size: 1rem;">trending_up</span> +12% this month</p>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="dash-card">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div>
+                            <p class="text-secondary small fw-bold text-uppercase mb-1">Active Projects</p>
+                            <h3 class="fw-bold text-dark mb-0">14</h3>
+                        </div>
+                        <div class="icon-box bg-primary bg-opacity-10 text-primary">
+                            <span class="material-symbols-outlined">landscape</span>
+                        </div>
+                    </div>
+                    <p class="small text-muted mb-0">Across 3 regions</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="dash-card">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div>
+                            <p class="text-secondary small fw-bold text-uppercase mb-1">Staff Online</p>
+                            <h3 class="fw-bold text-dark mb-0">8/12</h3>
+                        </div>
+                        <div class="icon-box bg-info bg-opacity-10 text-info">
+                            <span class="material-symbols-outlined">engineering</span>
+                        </div>
+                    </div>
+                    <p class="small text-muted mb-0">4 crews in the field</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="dash-card">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div>
+                            <p class="text-secondary small fw-bold text-uppercase mb-1">Total Clients</p>
+                            <h3 class="fw-bold text-dark mb-0">210</h3>
+                        </div>
+                        <div class="icon-box bg-warning bg-opacity-10 text-warning">
+                            <span class="material-symbols-outlined">groups</span>
+                        </div>
+                    </div>
+                    <p class="small text-success fw-bold mb-0"><span class="material-symbols-outlined align-middle" style="font-size: 1rem;">trending_up</span> +3 this week</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="dash-card">
+                    <h5 class="fw-bold mb-4">Revenue Overview</h5>
+                    <div class="chart-placeholder text-muted flex-column gap-2">
+                        <span class="material-symbols-outlined" style="font-size: 3rem;">bar_chart</span>
+                        Chart Component (Chart.js / ApexCharts)
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="dash-card">
+                    <h5 class="fw-bold mb-4">Recent Activity</h5>
+                    <div class="d-flex gap-3 mb-3 border-bottom pb-3">
+                        <div class="bg-success bg-opacity-10 text-success rounded-circle p-2 d-flex"><span class="material-symbols-outlined" style="font-size: 1rem;">payments</span></div>
+                        <div>
+                            <p class="mb-1 fw-bold">Invoice #89 Paid</p>
+                            <p class="small text-muted mb-0">Client: Sarah Adams • $1,500</p>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3 mb-3 border-bottom pb-3">
+                        <div class="bg-primary bg-opacity-10 text-primary rounded-circle p-2 d-flex"><span class="material-symbols-outlined" style="font-size: 1rem;">check_circle</span></div>
+                        <div>
+                            <p class="mb-1 fw-bold">Project Completed</p>
+                            <p class="small text-muted mb-0">Oakwood Estate Front Yard</p>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <div class="bg-danger bg-opacity-10 text-danger rounded-circle p-2 d-flex"><span class="material-symbols-outlined" style="font-size: 1rem;">build</span></div>
+                        <div>
+                            <p class="mb-1 fw-bold">Equipment Issue Reported</p>
+                            <p class="small text-muted mb-0">Mower EQ-112 needs maintenance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('button, a.btn, .action-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.top.location.href = '../404.html';
+            });
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client Projects</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body { background-color: #f8f9fa; padding: 1rem 2rem; }
+        .dash-card { background: #fff; border: 1px solid rgba(0,0,0,0.05); border-radius: 1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.02); padding: 1.5rem; transition: transform 0.2s; }
+        .project-img { height: 180px; object-fit: cover; border-radius: 0.75rem; margin-bottom: 1rem; }
+    </style>
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="fw-bold text-primary mb-0">My Projects</h2>
+            <button class="btn btn-premium-outline rounded-pill px-4 fw-bold">+ Request New Project</button>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Active Project -->
+            <div class="col-md-6">
+                <div class="dash-card">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 rounded-pill px-3 py-2">In Progress</span>
+                        <span class="text-muted small fw-bold">Est. Completion: Oct 20</span>
+                    </div>
+                    <img src="../assets/images/img_local_11.webp" class="w-100 project-img" alt="Project Image">
+                    <h4 class="fw-bold text-dark">Front Yard Redesign</h4>
+                    <p class="text-secondary small mb-4">Complete overhaul of the front yard including drought-resistant native plants and a modern stone pathway.</p>
+                    
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between small fw-bold mb-1">
+                            <span>Progress</span>
+                            <span class="text-success">65%</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 65%;"></div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-light w-100 fw-bold text-primary">View Details</button>
+                </div>
+            </div>
+            
+            <!-- Completed Project -->
+            <div class="col-md-6">
+                <div class="dash-card opacity-75">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="badge bg-secondary bg-opacity-10 text-secondary border border-secondary border-opacity-25 rounded-pill px-3 py-2">Completed</span>
+                        <span class="text-muted small fw-bold">Finished: May 2023</span>
+                    </div>
+                    <img src="../assets/images/img_local_12.webp" class="w-100 project-img" style="filter: grayscale(20%);" alt="Project Image">
+                    <h4 class="fw-bold text-dark">Backyard Patio Installation</h4>
+                    <p class="text-secondary small mb-4">Installation of a 400 sq ft bluestone patio with a built-in fire pit and surrounding seating wall.</p>
+                    
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between small fw-bold mb-1">
+                            <span>Progress</span>
+                            <span class="text-secondary">100%</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-outline-secondary w-100 fw-bold">View Gallery</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('button, a.btn, .action-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.top.location.href = '../404.html';
+            });
+        });
+    });
+</script>
+</body>
+</html>

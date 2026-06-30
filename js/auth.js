@@ -10,7 +10,7 @@ if (signupForm) {
 
     const name        = document.getElementById("name").value;
     const selectedRoleInput = document.querySelector('input[name="role"]:checked');
-    const role        = selectedRoleInput ? selectedRoleInput.value : 'Patient';
+    const role        = selectedRoleInput ? selectedRoleInput.value : 'Client';
     const email       = document.getElementById("email").value;
     const password    = document.getElementById("password").value;
     const confirmPass = document.getElementById("confirmPassword").value;

@@ -17,15 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (userAvatar) userAvatar.textContent = user.name.charAt(0).toUpperCase();
 
     // Show role badge & correct nav
-    const role = user.role || 'Patient';
+    const role = user.role || 'Client';
     if (roleBadge) roleBadge.textContent = role;
 
-    const navPatient = document.getElementById('navPatient');
-    const navTherapist = document.getElementById('navTherapist');
+    const navClient = document.getElementById('navClient');
+    const navLandscaper = document.getElementById('navLandscaper');
     const navAdmin = document.getElementById('navAdmin');
 
-    if (navPatient) navPatient.style.display = role === 'Patient' ? 'block' : 'none';
-    if (navTherapist) navTherapist.style.display = role === 'Therapist' ? 'block' : 'none';
+    if (navClient) navClient.style.display = role === 'Client' ? 'block' : 'none';
+    if (navLandscaper) navLandscaper.style.display = role === 'Landscaper' ? 'block' : 'none';
     if (navAdmin) navAdmin.style.display = role === 'Admin' ? 'block' : 'none';
 
     // Signout Logic
@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Define default pages for each role
     const roleDefaults = {
-        'Patient': 'home',
-        'Therapist': 'tasks',
+        'Client': 'home',
+        'Landscaper': 'tasks',
         'Admin': 'adminOverview'
     };
 

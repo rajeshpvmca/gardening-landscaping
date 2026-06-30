@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Team</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body { background-color: #f8f9fa; padding: 1rem 2rem; }
+        .dash-card { background: #fff; border: 1px solid rgba(0,0,0,0.05); border-radius: 1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.02); padding: 1.5rem; }
+        .avatar { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: white; }
+    </style>
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="fw-bold text-primary mb-0">Team Management</h2>
+            <button class="btn btn-premium rounded-pill px-4 fw-bold">+ Add Employee</button>
+        </div>
+        
+        <div class="dash-card">
+            <div class="table-responsive">
+                <table class="table align-middle table-hover">
+                    <thead class="table-light">
+                        <tr class="text-uppercase text-secondary small tracking-widest">
+                            <th>Employee Name</th>
+                            <th>Role / Crew</th>
+                            <th>Status</th>
+                            <th>Active Tasks</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="avatar bg-primary">MJ</div>
+                                    <div>
+                                        <h6 class="fw-bold mb-0">Mike Johnson</h6>
+                                        <small class="text-muted">mike@stackly.com</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Crew Leader - Alpha</td>
+                            <td><span class="badge bg-success bg-opacity-10 text-success rounded-pill px-3">In Field</span></td>
+                            <td>3</td>
+                            <td>
+                                <button class="btn btn-sm btn-light text-primary"><span class="material-symbols-outlined align-middle">edit</span></button>
+                                <button class="btn btn-sm btn-light text-danger"><span class="material-symbols-outlined align-middle">delete</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="avatar bg-success">DS</div>
+                                    <div>
+                                        <h6 class="fw-bold mb-0">David Smith</h6>
+                                        <small class="text-muted">david@stackly.com</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Landscaper - Beta</td>
+                            <td><span class="badge bg-secondary bg-opacity-10 text-secondary rounded-pill px-3">Off Shift</span></td>
+                            <td>0</td>
+                            <td>
+                                <button class="btn btn-sm btn-light text-primary"><span class="material-symbols-outlined align-middle">edit</span></button>
+                                <button class="btn btn-sm btn-light text-danger"><span class="material-symbols-outlined align-middle">delete</span></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('button, a.btn, .action-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.top.location.href = '../404.html';
+            });
+        });
+    });
+</script>
+</body>
+</html>

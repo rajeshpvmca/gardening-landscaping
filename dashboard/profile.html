@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/dash-page.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body { padding: 1.25rem; }
+        .profile-header {
+            background: linear-gradient(135deg, var(--bs-primary), var( --bs-success));
+            border-radius: 20px;
+            padding: 2.5rem 1.25rem;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 1.25rem;
+        }
+        .profile-avatar-lg {
+            width: 72px; height: 72px;
+            border-radius: 50%;
+            background: rgba(255,255,255,.3);
+            border: 3px solid #fff;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.8rem; font-weight: 700;
+            margin: 0 auto .75rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .profile-name { font-size: 1.2rem; font-weight: 700; margin-bottom: 4px; }
+        .profile-role {
+            background: rgba(0,0,0,.15);
+            display: inline-block;
+            padding: 4px 18px;
+            border-radius: 20px;
+            font-size: .75rem;
+            font-weight: 600;
+        }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; margin-bottom: .9rem; }
+        .form-ctrl {
+            border: 1px solid var(--outline-variant) !important;
+            border-radius: 12px !important;
+            padding: 0.75rem 1rem !important;
+            font-size: 0.9rem !important;
+            background: #fff !important;
+            transition: all 0.3s ease !important;
+            width: 100%;
+        }
+        .form-ctrl:focus {
+            border-color: var(--secondary) !important;
+            box-shadow: 0 0 0 4px rgba(65, 105, 0, 0.1) !important;
+            outline: none !important;
+        }
+        .form-ctrl:read-only {
+            background: #f1f5f9 !important;
+            cursor: not-allowed;
+        }
+        .password-field-wrapper {
+            position: relative;
+        }
+        .password-field-wrapper .form-ctrl {
+            padding-right: 48px !important;
+        }
+        .eye-toggle-btn {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: transparent;
+            border: none;
+            color: var(--on-surface-variant);
+            padding: 6px;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.3s ease;
+        }
+        .eye-toggle-btn:hover {
+            color: var(--secondary);
+        }
+        @media (max-width: 600px) {
+            .form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="page-title">Profile</h1>
+    <p class="page-subtitle">View and update your personal information.</p>
+
+    <div class="profile-header">
+        <div class="profile-avatar-lg" id="profileAvatar">U</div>
+        <div class="profile-name" id="profileName">User Name</div>
+        <div class="profile-role" id="profileRole">Customer</div>
+    </div>
+
+    <div class="content-card">
+        <div class="content-card-title">Personal Information</div>
+        <form onsubmit="saveProfile(event)">
+            <div class="form-row">
+                <div>
+                    <label class="form-label-dash">Full Name</label>
+                    <input type="text" class="form-ctrl" id="editName" placeholder="Full Name" pattern="[A-Za-z\s]+"
+                                    oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
+                </div>
+                <div>
+                    <label class="form-label-dash">Email Address</label>
+                    <input type="email" class="form-ctrl" id="editEmail" placeholder="email@example.com" readonly>
+                </div>
+                <div>
+                    <label class="form-label-dash">Phone Number</label>
+                    <input type="tel" class="form-ctrl" id="editPhone" placeholder="Your Number" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);">
+                </div>
+                <div>
+                    <label class="form-label-dash">Country</label>
+                    <input type="text" class="form-ctrl" id="editCountry" placeholder="Your country">
+                </div>
+            </div>
+            <button type="submit" class="btn-premium-outline"><i class="fas fa-save me-2"></i>Save Changes</button>
+        </form>
+    </div>
+
+    <div class="content-card">
+        <div class="content-card-title">Change Password</div>
+        <div class="form-row">
+            <div class="mb-1">
+                <label class="form-label-dash">New Password</label>
+                <div class="password-field-wrapper">
+                    <input type="password" class="form-ctrl" id="newPassword" placeholder="New password" minlength="8">
+                    <button class="eye-toggle-btn toggle-password" type="button"><i class="fas fa-eye"></i></button>
+                </div>
+                <div class="mt-2" style="height:4px;border-radius:4px;background:rgba(0,0,0,0.1);overflow:hidden;">
+                    <div id="strengthBar" style="height:100%;width:0;transition:width 0.3s, background 0.3s;"></div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label-dash">Confirm Password</label>
+                <div class="password-field-wrapper">
+                    <input type="password" class="form-ctrl" id="confirmNewPassword" placeholder="Confirm new password">
+                    <button class="eye-toggle-btn toggle-password" type="button"><i class="fas fa-eye"></i></button>
+                </div>
+                <div id="matchMsg" class="mt-2" style="font-size:.76rem;min-height:1.1rem;"></div>
+            </div>
+        </div>
+        <button type="button" onclick="updatePassword()" class="btn-premium" style="margin-top:.5rem;">Update Password</button>
+    </div>
+
+    <script>
+        const user = JSON.parse(localStorage.getItem('loggedInUser'));
+        if (!user) window.location.href = '../404.html';
+        document.getElementById('profileAvatar').textContent = user.name.charAt(0).toUpperCase();
+        document.getElementById('profileName').textContent = user.name;
+        document.getElementById('profileRole').textContent = user.role;
+        document.getElementById('editName').value = user.name;
+        document.getElementById('editEmail').value = user.email;
+        document.getElementById('editPhone').value = user.phone || '';
+        document.getElementById('editCountry').value = user.country || '';
+
+        function saveProfile(e) {
+            e.preventDefault();
+            const newName = document.getElementById('editName').value.trim();
+            const newPhone = document.getElementById('editPhone').value.trim();
+            const newCountry = document.getElementById('editCountry').value.trim();
+
+            if (newName) {
+                user.name = newName;
+                user.phone = newPhone;
+                user.country = newCountry;
+                localStorage.setItem('loggedInUser', JSON.stringify(user));
+                document.getElementById('profileName').textContent = newName;
+                document.getElementById('profileAvatar').textContent = newName.charAt(0).toUpperCase();
+                alert('Profile updated!');
+            }
+        }
+
+        // Password logic matching signup page
+        const newPwd = document.getElementById('newPassword');
+        const confPwd = document.getElementById('confirmNewPassword');
+        const sBar = document.getElementById('strengthBar');
+        const mMsg = document.getElementById('matchMsg');
+        
+        const pwdRules = {
+            'r-len': v => v.length >= 8,
+            'r-upper': v => /[A-Z]/.test(v),
+            'r-num': v => /[0-9]/.test(v),
+            'r-sym': v => /[^A-Za-z0-9]/.test(v)
+        };
+        const sColors = ['#ef4444', '#f97316', '#eab308', '#22C55E'];
+        const sLabels = ['Weak', 'Fair', 'Good', 'Strong'];
+
+        newPwd.addEventListener('input', () => {
+            const v = newPwd.value;
+            let passed = 0;
+            Object.values(pwdRules).forEach(fn => { if (fn(v)) passed++; });
+            sBar.style.width = (passed / 4 * 100) + '%';
+            sBar.style.background = sColors[passed - 1] || 'rgba(0,0,0,0.05)';
+            sBar.title = sLabels[passed - 1] || '';
+            checkNewMatch();
+        });
+
+        confPwd.addEventListener('input', checkNewMatch);
+
+        function checkNewMatch() {
+            if (!confPwd.value) { mMsg.textContent = ''; return; }
+            if (confPwd.value === newPwd.value) {
+                mMsg.style.color = '#22C55E';
+                mMsg.innerHTML = '<i class="fas fa-check-circle me-1"></i>Passwords match';
+            } else {
+                mMsg.style.color = '#ef4444';
+                mMsg.innerHTML = '<i class="fas fa-times-circle me-1"></i>Passwords do not match';
+            }
+        }
+
+        function updatePassword() {
+            const pwd = newPwd.value;
+            const conf = confPwd.value;
+            
+            let passed = 0;
+            Object.values(pwdRules).forEach(fn => { if (fn(pwd)) passed++; });
+
+            if (pwd.length === 0) {
+                alert('Please enter a new password.');
+                return;
+            }
+            if (passed < 4) {
+                alert('Password is not strong enough. Ensure it has 8+ characters, an uppercase letter, a number, and a symbol.');
+                return;
+            }
+            if (pwd !== conf) {
+                alert('Passwords do not match.');
+                return;
+            }
+
+            const registryKey = "user_" + user.email;
+            const regUser = JSON.parse(localStorage.getItem(registryKey));
+            
+            if (regUser) {
+                regUser.password = pwd;
+                localStorage.setItem(registryKey, JSON.stringify(regUser));
+                alert('Password updated successfully!');
+                newPwd.value = ''; confPwd.value = '';
+                sBar.style.width = '0'; mMsg.textContent = '';
+            }
+        }
+
+        // Visibility Toggle
+        document.querySelectorAll('.toggle-password').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const input = this.parentElement.querySelector('input');
+                const type = input.type === 'password' ? 'text' : 'password';
+                input.type = type;
+                this.querySelector('i').classList.toggle('fa-eye');
+                this.querySelector('i').classList.toggle('fa-eye-slash');
+            });
+        });
+    </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('button, a.btn, .action-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.top.location.href = '../404.html';
+            });
+        });
+    });
+</script>
+</body>
+</html>
