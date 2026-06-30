@@ -509,3 +509,33 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .display-4, .display-5 {
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.4);
 }
+
+/* Feature Grid Card Hover Effects */
+.feature-card-hover {
+  transition: all 0.4s ease;
+}
+.feature-card-hover:hover {
+  background-color: var(--bs-success) !important;
+  color: white !important;
+  transform: translateY(-10px);
+  border-color: var(--bs-success) !important;
+}
+.feature-card-hover:hover h3,
+.feature-card-hover:hover p,
+.feature-card-hover:hover a {
+  color: white !important;
+}
+.feature-card-hover:hover .icon-circle {
+  background-color: white !important;
+  color: var(--bs-success) !important;
+  transform: rotate(360deg);
+}
+.feature-card-hover .icon-circle {
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.feature-card-hover .icon-circle span {
+  transition: color 0.4s ease;
+}
+.feature-card-hover:hover .icon-circle span {
+  color: var(--bs-success) !important;
+}
